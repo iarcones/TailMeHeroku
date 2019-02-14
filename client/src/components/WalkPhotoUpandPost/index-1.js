@@ -79,13 +79,12 @@ class WalkPhotoUpandPost extends Component {
 
 
     handleDrop = files => {
-        console.log(files);
         // Push all the axios request promise into a single array
         const idWalk = 1; // Change to actual walkId from TodayWalks in loadWalks - add ID into new button next to Walk Map
         const walkerId = this.props.WalkerID;
         const uploaders = files.map(file => {
             // Initial FormData
-            console.log("FIIIIIILLLLLLEEEE", file)
+            console.log("FIIIIIILLLLLLEEEE",file)
             const formData = new FormData();
             formData.append("file", file);
             formData.append("upload_preset", `${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`);
@@ -135,62 +134,27 @@ class WalkPhotoUpandPost extends Component {
         selectedImages.map(data => {
             const dataImageOwner = {
                 dogOwnerId: this.state.onwnerList[0].value,
-                sendCustomer: true
+                sendCustomer:true
             }
-            const imageId = data.id
+            const imageId=data.id
             console.log("dataImageOwner", dataImageOwner)
 
-            API.updateImageOwner(dataImageOwner, idWalk, imageId)
+            API.updateImageOwner(dataImageOwner, idWalk,imageId)
                 .then(res => {
-                    this.loadImages()
+                  this.loadImages()
                 })
-
-            return (selectedImages)
+                
+                return(selectedImages)
         })
-
+        
     }
-
-    // checkUploadResult = (resultEvent) => {
-    //     if (resultEvent.event === 'success') {
-    //         console.log(this.props.currentUser.id);
-    //         this.props.postPhoto({
-    //             user_id: this.props.currentUser.id,
-    //             caption: '',
-    //             url: resultEvent.info.secure_url
-    //         })
-    //             .then(this.props.history.push(`/profile`))
-    //     }
-    // }
-    checkUploadResult = (resultEvent) => {
-        if (resultEvent.event === 'success') {
-            console.log(resultEvent)
-        }
-    }
-
-    showWidget = () => {
-        let widget = window.cloudinary.createUploadWidget({
-            cloudName: `${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}`,
-            uploadPreset: `${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`,
-            sources: [
-                "local",
-                "camera"
-            ],
-        }, (error, result) => { this.checkUploadResult(result) });
-        widget.open()
-    }
+    
 
     render() {
 
-
         return (
 
-
             <div>
-                <div id='photo-form-container'>
-                    <button onClick={this.showWidget}>Upload Photo</button>
-                </div>
-
-
                 <form>
                     <div className="FileUpload" style={{
                         'textAlign': 'center'
