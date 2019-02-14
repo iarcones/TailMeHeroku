@@ -150,20 +150,21 @@ class WalkPhotoUpandPost extends Component {
 
     }
 
-    // checkUploadResult = (resultEvent) => {
-    //     if (resultEvent.event === 'success') {
-    //         console.log(this.props.currentUser.id);
-    //         this.props.postPhoto({
-    //             user_id: this.props.currentUser.id,
-    //             caption: '',
-    //             url: resultEvent.info.secure_url
-    //         })
-    //             .then(this.props.history.push(`/profile`))
-    //     }
-    // }
-    checkUploadResult = (resultEvent) => {
-        if (resultEvent.event === 'success') {
-            console.log(resultEvent)
+    checkUploadResult = (result) => {
+        if (result.event === 'success') {
+            console.log(result)
+            console.log(result.info.url)
+            // const data = response.data;
+            const fileURL = result.info.url; // You should store this URL for future references in your app
+            const imageData = {
+                walkId: 1, // Change to actual walkId from TodayWalks in loadWalks - add ID into new button next to Walk Map
+                url: fileURL
+            }
+
+            API.uploadPhotoWalks(imageData, walkerId)
+                .then(res => {
+                    this.loadImages()
+                })
         }
     }
 
@@ -181,9 +182,7 @@ class WalkPhotoUpandPost extends Component {
 
     render() {
 
-
         return (
-
 
             <div>
                 <div id='photo-form-container'>
