@@ -462,8 +462,9 @@ class TodayWalks extends Component {
             Header: 'Check-In/Check-Out',
             // accessor: data => data.checkInTime,
             // accessor: 'checkInTime',
+
             Cell: row => row.original.checkInTime === null ? (
-                <div><button className="TodayWalks__upcoming--list-publish-button" onClick={this.handleCheckIn.bind(this, row.original.id, row.original.dogName)}>Check-in </button></div>
+                <div><button className="TodayWalks__past--list-publish-button" onClick={this.handleCheckIn.bind(this, row.original.id, row.original.dogName)}>Check-in </button></div>
             ) : (
                     <div>
                         <button className="TodayWalks__upcoming--list-publish-button" onClick={this.handleCheckOut.bind(this, row.original.id, row.original.dogName)}>
@@ -500,7 +501,9 @@ class TodayWalks extends Component {
             // accessor: data => data.dogOwner.dogName,
             accessor: 'dogName',
             Cell: props => <span>{props.value}</span>
-        }, {
+        }, 
+        
+        {
             // id: 'checkinTime',
             Header: 'Check In',
             // accessor: data => data.checkInTime,
@@ -527,7 +530,7 @@ class TodayWalks extends Component {
             Cell: row => <div><button className="TodayWalks__past--list-publish-button" onClick={this.handleOnClickNote.bind(this, row.original.id, row.original.dogName, row.original.dogOwnerName, row.original.dogOwnerEmail, true, Moment(row.original.checkOutTime, "YYYY-MM-DD  HH:mm:ss").format("MM/DD/YYYY - HH:mm"))}>Review Walk Notes</button></div>
         },
         {
-            // id: 'notes',
+            // id: '?????',
             Header: 'Map the Walk',
             // accessor: data => data.checkInTime,
             // accessor: 'checkInTime',
