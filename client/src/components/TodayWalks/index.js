@@ -254,7 +254,7 @@ class TodayWalks extends Component {
 
                     navigator.geolocation.getCurrentPosition(success, error, options);
 
-                }, 5000);
+                }, 60000);
 
 
                 API.updateCheckInOut("in", walkId, coords.latitude, coords.longitude, dogData)
