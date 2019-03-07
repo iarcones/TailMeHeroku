@@ -39,6 +39,8 @@
 @import "components/HeaderWalker";
 @import "components/ContactWalker";
 @import "components/FooterWalker";
+@import "components/TopBarNavOwner";
+@import "components/TopBarNavWalker";
 
 @import "pages/aboutTailMe";
 @import "pages/billing";
@@ -67,3 +69,4 @@
 @import "pages/splashWalker";
 @import "pages/aboutTailMeWalker";
 @import "pages/createDog";
+@import "pages/createWalkerQualifications";

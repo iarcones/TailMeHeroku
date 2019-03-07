@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import SidebarNav from '../components/SidebarNav';
-import SidebarNavOwner from '../components/SidebarNavOwner';
 import Profile from './Profile'
-import TodayWalks from '../components/TodayWalks';
-import InviteOwners from "../components/InviteOwners";
-import ShowMap from "../components/ShowMap";
-import ScheduleWalks from "../components/WalkerScheduleWalks";
-import Schedule from '../components/Schedule';
-import WalkerCertification from './WalkerCertification';
-import WalkPhotoUpload from "../components/WalkPhotoUpandPost";
 import DogOwnerGallery from "../components/DogGallery";
 import OwnerWalks from "../components/ownerWalks";
 import CreateDog from './createDog';
-import Header from "../components/Header";
+import TopBarNavOwner from "../components/TopBarNavOwner";
 import Footer from "../components/Footer";
 import "../index.css";
 
@@ -55,7 +46,7 @@ class ProfileContainer extends Component {
         }
         else {
             await axios
-                .get('/findUser', {
+                .get('/findOwner', {
                     params: {
                         username: this.props.match.params.username
                     },
@@ -88,6 +79,10 @@ class ProfileContainer extends Component {
         }
     }
 
+    capitalizeUserType(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     // Function to handle Sidebar Navigation
     handlePageChange = page => {
         this.setState({ currentPage: page });
@@ -100,7 +95,7 @@ class ProfileContainer extends Component {
                 username={this.state.username}
                 firstName={this.state.firstName}
                 lastName={this.state.lastName}
-                userType={this.state.userType}
+                userType={this.capitalizeUserType(this.state.userType)}
                 aboutMe={this.state.aboutMe}
                 address={this.state.address}
                 City={this.state.City}
@@ -111,13 +106,14 @@ class ProfileContainer extends Component {
             case "Walks": return <OwnerWalks
                 dogOwnerId={this.state.userId}
             />;
+            // Make it my dogs with react table and existing CreateDog component
             case "Dogs": return <CreateDog
                 UserID={this.state.userId}
                 username={this.state.username}
                 handlePageChange={this.handlePageChange}
             />;
             case "Gallery": return <DogOwnerGallery
-                UserID={this.state.userId}
+                userId={this.state.userId}
                 username={this.state.username}
                 handlePageChange={this.handlePageChange}
             />;
@@ -125,7 +121,7 @@ class ProfileContainer extends Component {
                 username={this.state.username}
                 firstName={this.state.firstName}
                 lastName={this.state.lastName}
-                userType={this.state.userType}
+                userType={this.capitalizeUserType(this.state.userType)}
                 aboutMe={this.state.aboutMe}
                 address={this.state.address}
                 City={this.state.City}
@@ -211,14 +207,21 @@ class ProfileContainer extends Component {
         } else {
             return (
                 <div className="ownerDash">
-                    <Header />
                     <div className="ownerDash__grid">
-                        <SidebarNavOwner className="ownerDash__grid--sidebarNav"
+                    <div className="ownerDash__grid--header">
+                            <TopBarNavOwner
+                                username={username}
+                                currentPage={this.state.currentPage}
+                                handlePageChange={this.handlePageChange}
+                                handleLogOut={this.handleLogOut}
+                            />
+                        </div>
+                        {/* <SidebarNavOwner className="ownerDash__grid--sidebarNav"
                             username={username}
                             currentPage={this.state.currentPage}
                             handlePageChange={this.handlePageChange}
                             handleLogOut={this.handleLogOut}
-                        />
+                        /> */}
                         <div className="ownerDash__grid--main-content">
                             {this.renderOwnerPage()}
                         </div>

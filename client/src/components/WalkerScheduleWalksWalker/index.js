@@ -8,8 +8,9 @@ import "../../index.css"
 class WalkerScheduleWalksWalker extends Component {
   state = {
     date: new Date(),
-    onwnerList: [],
-    selectedOptions: []
+    ownerList: [],
+    selectedOptions: [],
+
   }
 
   componentDidMount() {
@@ -27,7 +28,7 @@ class WalkerScheduleWalksWalker extends Component {
           }
           return (dataOwners)
         })
-        this.setState({ onwnerList: dataDogOwners })
+        this.setState({ ownerList: dataDogOwners })
       })
       .catch(err => console.log(err));
   }
@@ -40,10 +41,8 @@ class WalkerScheduleWalksWalker extends Component {
 
   handleSchedule = () => {
     const idWalker = this.props.walkerID;
-    console.log(this.state.selectedOptions)
     const selectedOwners = this.state.selectedOptions.map(data => {
       const idOwner = data.value;
-      console.log('date', this.state.date)
       const dataOwners = {
         walkerId: idWalker,
         dogOwnerId: idOwner,
@@ -56,7 +55,7 @@ class WalkerScheduleWalksWalker extends Component {
 
     API.addSchedule(selectedOwners, idWalker)
       .then(res => {
-        this.props.loadMyWalks();
+        this.props.closeModal();
       })
   }
 
@@ -64,10 +63,6 @@ class WalkerScheduleWalksWalker extends Component {
     return (
       <div className="walkerrdtPicker">
         <p className="walkerrdtPicker__title">Schedule a Walk</p>
-        {/* <br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br> */}
-
         <DateTimePicker
           onChange={this.onChange}
           value={this.state.date}
@@ -75,15 +70,12 @@ class WalkerScheduleWalksWalker extends Component {
           disableClock={true}
           calendarClassName='class1'
         />
-
-        {/* <br></br> */}
         <div className="walkerrdtPicker__select">
           <ReactMultiSelectCheckboxes
-            options={this.state.onwnerList}
+            options={this.state.ownerList}
             onChange={this.handleChangeList} />
         </div>
-        {/* <br></br> */}
-        <button className="walkerrdtPicker__button" onClick={this.handleSchedule}>schedule</button>
+        <button className="walkerrdtPicker__button" onClick={this.handleSchedule}>Schedule</button>
       </div>
     );
   }

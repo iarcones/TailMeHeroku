@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import SidebarNav from '../components/SidebarNav';
-import Profile from './Profile';
+// import SidebarNav from '../components/SidebarNav';
+import TopBarNavWalker from '../components/TopBarNavWalker';
 import ProfileWalker from "./ProfileWalker";
 import TodayWalks from '../components/TodayWalks';
 import InviteOwners from "../components/InviteOwners";
-import ShowMap from "../components/ShowMap";
 import WalkPhotoUpload from "../components/WalkPhotoUpandPost";
 import ScheduleWalker from '../components/ScheduleWalker';
 import WalkerCertification from './WalkerCertification';
-import CreateDog from './createDog';
 import FooterWalker from "../components/FooterWalker";
-import HeaderWalker from "../components/HeaderWalker";
 import "../index.css";
 
 
@@ -28,6 +25,7 @@ class ProfileContainerWalker extends Component {
         currentPage: "Home",
         userId: 0,
         username: '',
+        userEmail: '',
         firstName: '',
         lastName: '',
         userType: '',
@@ -37,6 +35,11 @@ class ProfileContainerWalker extends Component {
         State: '',
         zipCode: 0,
         country: '',
+        certification: '',
+        insurance: '',
+        bond: '',
+        services: '',
+        availibility: '',
         loggedIn: false,
         isLoading: true,
         deleted: false,
@@ -53,7 +56,7 @@ class ProfileContainerWalker extends Component {
         }
         else {
             await axios
-                .get('/findUser', {
+                .get('/findWalker', {
                     params: {
                         username: this.props.match.params.username
                     },
@@ -63,6 +66,7 @@ class ProfileContainerWalker extends Component {
                     this.setState({
                         userId: response.data.UserID,
                         username: this.props.match.params.username,
+                        userEmail: response.data.email,
                         firstName: response.data.firstName,
                         lastName: response.data.lastName,
                         userType: response.data.userType,
@@ -72,6 +76,11 @@ class ProfileContainerWalker extends Component {
                         State: response.data.State,
                         zipCode: response.data.zipCode,
                         country: response.data.country,
+                        certification: response.data.certification,
+                        insurance: response.data.insurance,
+                        bond: response.data.bond,
+                        services: response.data.services,
+                        availibility: response.data.availibility,
                         loggedIn: true,
                         isLoading: false,
                         error: false
@@ -85,6 +94,9 @@ class ProfileContainerWalker extends Component {
                 });
         }
     }
+    capitalizeUserType(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
 
     // Function to handle Sidebar Navigation
     handlePageChange = page => {
@@ -93,38 +105,46 @@ class ProfileContainerWalker extends Component {
 
     // Function to handle rendering the correct walker page from Sidebar Nav
     renderWalkerPage = () => {
+        const walkerFullName = this.state.firstName + " " + this.state.lastName;
         switch (this.state.currentPage) {
             case "Home": return <ProfileWalker
                 username={this.state.username}
                 firstName={this.state.firstName}
                 lastName={this.state.lastName}
-                userType={this.state.userType}
+                userType={this.capitalizeUserType(this.state.userType)}
                 aboutMe={this.state.aboutMe}
                 address={this.state.address}
                 City={this.state.City}
                 State={this.state.State}
                 zipCode={this.state.zipCode}
                 country={this.state.country}
+                certification={this.state.certification}
+                insurance={this.state.insurance}
+                bond={this.state.bond}
+                services={this.state.services}
+                availibility={this.state.availibility}
             />;
             case "Walks": return <TodayWalks
                 walkerId={this.state.userId}
+                walkerName={walkerFullName}
+                walkerEmail={this.state.userEmail}
             />;
-            // case "SchedWalks": return <ScheduleWalksWalker
-            //     walkerID={this.state.userId}
-            //     handlePageChange={this.handlePageChange}
-            // />;
             case "FullSchedule": return <ScheduleWalker
                 walkerID={this.state.userId}
                 username={this.state.username}
             />
             case "Certs": return <WalkerCertification
                 username={this.state.username}
+                certification={this.state.certification}
+                insurance={this.state.insurance}
+                bond={this.state.bond}
+                services={this.state.services}
+                availibility={this.state.availibility}
             />;
             case "Invite": return <InviteOwners
                 walkerId={this.state.userId}
-                walkerName={this.state.username}
+                walkerName={walkerFullName}
             />;
-            case "Map": return <ShowMap />;
             case "Upload": return <WalkPhotoUpload
                 WalkerID={this.state.userId}
             />;
@@ -132,13 +152,18 @@ class ProfileContainerWalker extends Component {
                 username={this.state.username}
                 firstName={this.state.firstName}
                 lastName={this.state.lastName}
-                userType={this.state.userType}
+                userType={this.capitalizeUserType(this.state.userType)}
                 aboutMe={this.state.aboutMe}
                 address={this.state.address}
                 City={this.state.City}
                 State={this.state.State}
                 zipCode={this.state.zipCode}
                 country={this.state.country}
+                certification={this.state.certification}
+                insurance={this.state.insurance}
+                bond={this.state.bond}
+                services={this.state.services}
+                availibility={this.state.availibility}
             />;
         }
     };
@@ -218,20 +243,27 @@ class ProfileContainerWalker extends Component {
         } else {
             return (
                 <div className="walkerDash">
-                    <HeaderWalker />
                     <div className="walkerDash__grid">
-                        <SidebarNav className="walkerDash__grid--sidebarNav"
+                        <div className="walkerDash__grid--header">
+                            <TopBarNavWalker
+                                username={username}
+                                currentPage={this.state.currentPage}
+                                handlePageChange={this.handlePageChange}
+                                handleLogOut={this.handleLogOut}
+                            />
+                        </div>
+                        {/* <SidebarNav className="walkerDash__grid--sidebarNav"
                             username={username}
                             currentPage={this.state.currentPage}
                             handlePageChange={this.handlePageChange}
                             handleLogOut={this.handleLogOut}
-                        />
+                        /> */}
                         <div className="walkerDash__grid--main-content">
                             {this.renderWalkerPage()}
                         </div>
                     </div>
                     <div className="walkerDash__grid--footer" >
-                    <FooterWalker />
+                        <FooterWalker />
                     </div>
                 </div>
             );

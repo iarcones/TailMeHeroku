@@ -2,13 +2,17 @@ import axios from "axios";
 
 export default {
 
-    // Gets the Walks
-    getOwnerWalks: function (id) {
-     
-        return axios.get(`/api/dogProfile/${id}/walks`);
+    // Gets owner Walks - other one is unnecessary when joining tables in dogController
+    getOwnerId: function (id) {
+        // console.log("idAPI:", id)
+        return axios.get(`/api/dogProfile/${id}/getId`)
     },
+    // getOwnerWalks: function (id) {
+
+    //     return axios.get(`/api/dogProfile/${id}/walks`);
+    // },
     getWalkerWalks: function (id) {
-    
+
         return axios.get(`/api/walker/${id}/walks`);
     },
     // Gets all walkers
@@ -28,7 +32,7 @@ export default {
 
     //DogProfile
     getDogProfile: function (id) {
-    
+
         return axios.get(`/api/dogProfile/${id}`);
     },
 
@@ -40,6 +44,10 @@ export default {
     //upload photo walks
     getImages: function (id) {
         return axios.get(`/api/walker/walks/${id}/getImages`)
+    },
+
+    getAllImages: function (id) {
+        return axios.get(`/api/walker/walks/${id}/getAllImages`)
     },
 
     //Get walks
@@ -61,15 +69,20 @@ export default {
         return axios.put(`/api/walker/schedule/${idWalk}`, data)
 
     },
-    updateCheckInOut: function (type, idWalk, lat, lng) {
-        console.log("API.js: ", type, idWalk, lat, lng)
+
+    deleteWalk: function (idWalk) {
+        return axios.delete(`/api/walker/walks/delete/${idWalk}`)
+
+    },
+    updateCheckInOut: function (type, idWalk, lat, lng, dataNote) {
+        console.log("API.js: ", type, idWalk, lat, lng,)
         // return axios.put(`/api/walker/check/${type}/${idWalk}`, data)
-        return axios.put(`/api/walker/check/${type}/${idWalk}/${lat}/${lng}`)
+        return axios.put(`/api/walker/check/${type}/${idWalk}/${lat}/${lng}`, dataNote)
     },
 
-    //Walker invite signup to the owner
-    createInvitation: function (data) {
-        console.log("API.js -  createInvitation")
+    //Walker text invite signup to the owner
+    createTextInvitation: function (data) {
+        console.log("API.js -  createTextInvitation")
         return axios.post("/api/walker/invitecustomer/" + data.ownerName + "/" + data.phoneNumber + "/" + data.specialCode + "/" + data.walkerId + "/" + data.walkerName);
     },
     //Walker invite signup to the owner ("/createOwner/:owneruserid/:specialcode/:walkerid")
@@ -87,23 +100,56 @@ export default {
             })
     },
 
-  
-    getImagesOwner: function (idOwner) {
-        return axios.get(`/api/dogProfile/${idOwner}/gallery`)
+
+    getImagesOwner: function (idUser) {
+        return axios.get(`/api/dogProfile/${idUser}/gallery`)
 
     },
     getImagesWalk: function (idWalk) {
-        return axios.get(`/api/walker/walks/${idWalk}/getImages`)
+        return axios.get(`/api/walker/walks/images/${idWalk}`)
 
     },
 
-    addImagesToWalk: function (data) { 
-        return axios.post(`/api/walker/walk/uploadImage`,data)
+    addImagesToUser: function (data) {
+        return axios.post(`/api/walker/walk/uploadImage`, data)
 
+    },
+    // /walk/image/update/:ImageID
+    updateImageSentStatus: function (imageId) {
+        return axios.put(`/api/walker/walk/image/update/${imageId}`)
+    },
+
+    checkImageExist: function (userId, imageId) {
+        console.log("IMAGE")
+        return axios.get(`/api/walker/walk/checkImage/${userId}/${imageId}`)
+    },
+
+    addNote: function (walkId, notes) {
+
+        return axios.put(`/api/walker/walk/${walkId}/addNote`, notes)
+    },
+    getNote: function (walkId) {
+        return axios.get(`/api/walker/walk/getnote/${walkId}`)
+    },
+
+    getWalkerCustomers: function (id) {
+
+        return axios.get(`/api/walker/getWalkerCustomers/${id}`)
+    },
+
+    editUserData: function (userId,dogOwnerId,userData) {
+
+        return axios.put(`/api/walker/editCustomerInfo/${userId}/${dogOwnerId}`,userData)
+    },
+    deleteUserData: function (userId) {
+        return axios.delete(`/api/walker/deleteUser/${userId}/`) 
     },
     
-    checkImageExist : function(walkId,imageId) {
-    return axios.get(`/api/walker/walk/${walkId}/${imageId}`)
+    updatePath: function (walkId, lat, lng) {
+        return axios.post(`/api/walker/updatepath/${walkId}/${lat}/${lng}/`) 
+    },
+
+    getPath: function (walkId) {
+        return axios.get(`/api/walker/getpath/${walkId}/`) 
     }
-    
 };

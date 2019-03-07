@@ -30,26 +30,28 @@ module.exports = {
 
   getImagesOwner: function (req, res) {
 
-    console.log("Get Images Owner..:", req.params.idOwner)
-    db.images
+    db.user
       .findAll({
-        include: [{
-          model: db.dogOwner,
-          required: true
-        }
-
+          include: [{
+            model: db.walkImages,
+            required: true,
+            include: [{
+              model: db.images,
+              required: true
+            }]
+          
+      },
         ],
         where: {
-          dogOwnerId: req.params.idOwner,
-
+          id: req.params.idUser
         }
       })
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+    .catch(err => { console.log(err); res.status(422).json(err) });
+},
 
   getOwnerWalks: function (req, res) {
-    console.log("test2")
+    console.log("dog Controller getOwnerWalks")
     db.walks
       .findAll({
         attributes: [
@@ -60,8 +62,8 @@ module.exports = {
           'walkDate'
         ],
         where: {
-          dogOwnerId:req.params.id // This is the id of the dog, despite the table name being dogOwner
-          
+          dogOwnerId: req.params.id // This is the id of the dog, despite the table name being dogOwner
+
         }
         //pending how to compare two dates
         //           , where: 
@@ -74,5 +76,27 @@ module.exports = {
       })
       .then(dbModel => { res.json(dbModel) })
       .catch(err => res.status(422).json(err))
-  }
+  },
+getOwnerId: function (req, res) {
+  // console.log("req.params.idUserDog:", req.params.idUserDog)
+  db.dogOwner.findAll({
+    include: [db.walks],
+    where: {
+      userId: req.params.id
+    },
+    attributes: [
+      'id',
+      'dogName',
+      'emergencyContact',
+      'userId',
+      [db.sequelize.fn('date_format', db.sequelize.col('walks.checkinTime'), '%Y-%m-%d %H:%i:%s'), 'checkInTime'],
+
+      [db.sequelize.fn('date_format', db.sequelize.col('walks.finishTime'), '%Y-%m-%d %H:%i:%s'), 'checkOutTime'],
+      'walks.walkDate'
+    ]
+  })
+    .then(dbModel => res.json(dbModel))
+    // .then(dbModel => console.log(dbModel))
+    .catch(err => res.status(422).json(err));
+},
 };
