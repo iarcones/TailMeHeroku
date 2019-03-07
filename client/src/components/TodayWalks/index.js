@@ -206,7 +206,7 @@ class TodayWalks extends Component {
 
 
     handleCheckIn = (walkId, dogName) => {
-
+        console.log("checkin")
         // Pass dogName as an object
         const dogData = {
             dogName: dogName
@@ -294,6 +294,7 @@ class TodayWalks extends Component {
     };
 
     handleCheckOut = (walkId, dogName) => {
+        console.log("checkout")
         // const walkerName = this.props.walkerName;
         // const walkerEmail = this.props.walkerEmail;
         // const ownerName = this.props.ownerName; // Add function to get owner name and/or add it to each dog
@@ -464,7 +465,7 @@ class TodayWalks extends Component {
             // accessor: 'checkInTime',
 
             Cell: row => row.original.checkInTime === null ? (
-                <div><button className="TodayWalks__past--list-publish-button" onClick={this.handleCheckIn.bind(this, row.original.id, row.original.dogName)}>Check-in </button></div>
+                <div><button className="TodayWalks__upcoming--list-publish-button" onClick={this.handleCheckIn.bind(this, row.original.id, row.original.dogName)}>Check-in </button></div>
             ) : (
                     <div>
                         <button className="TodayWalks__upcoming--list-publish-button" onClick={this.handleCheckOut.bind(this, row.original.id, row.original.dogName)}>
