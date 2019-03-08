@@ -52,7 +52,7 @@ class TodayWalks extends Component {
         //     lat: 37.7924791,
         //     lng: -122.1818368
         // },
-        zoom: 14,
+        zoom: 12,
         activeImage: "",
         walks: [],
         errorMessage: "",
@@ -682,7 +682,7 @@ class TodayWalks extends Component {
                                 {this.state.walkPoints.map(point => (
                                     <AnyReactComponent key={point.id}///all of the props ie walk.img/walk.lat))}
                                         id={point.id}
-                                        icon="../paw-tailme-2020.svg"
+                                        icon="../paw-tailme-1515.svg"
                                         lat={point.lat}
                                         lng={point.lng}
                                         // imageClick={this.handleImgClick}
