@@ -682,7 +682,7 @@ class TodayWalks extends Component {
                                 {this.state.walkPoints.map(point => (
                                     <AnyReactComponent key={point.id}///all of the props ie walk.img/walk.lat))}
                                         id={point.id}
-                                        icon="../paw-tailme-1010.svg"
+                                        icon="../paw-tailme-1515.svg"
                                         lat={point.lat}
                                         lng={point.lng}
                                         // imageClick={this.handleImgClick}
