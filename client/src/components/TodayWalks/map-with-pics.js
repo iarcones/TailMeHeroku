@@ -34,7 +34,7 @@ const AnyReactComponent = ({ id, icon, imageClick, lat, lng }) => (
         borderRadius: '100%',
         transform: 'translate(-50%, -50%)'
     }}
-        // onClick={() => imageClick(id)}
+        onClick={() => imageClick(id)}
     >
         <img src={icon}></img>
 
@@ -53,7 +53,7 @@ class TodayWalks extends Component {
         //     lat: 37.7924791,
         //     lng: -122.1818368
         // },
-        zoom: 13,
+        zoom: 14,
         activeImage: "",
         walks: [],
         errorMessage: "",
@@ -131,40 +131,38 @@ class TodayWalks extends Component {
             .catch(err => console.log(err));
     };
 
-    // handleOnClick = (walkId) => {
+    handleOnClick = (walkId) => {
 
-    //     API.getImagesWalk(walkId)
-    //         .then(res => {
-    //             // console.log("back from getpics")
-    //             // console.log("getpics: ", res.data)
-    //             // console.log("getpics dot image: ", res.data[0].image)
+        API.getImagesWalk(walkId)
+            .then(res => {
+                // console.log("back from getpics")
+                // console.log("getpics: ", res.data)
+                // console.log("getpics dot image: ", res.data[0].image)
 
-    //             // this.setState({
-    //             //   walks: res.data
-    //             // });
+                // this.setState({
+                //   walks: res.data
+                // });
 
-    //             let picsWithGpsInfo = res.data.filter(image => image.image.GPSLatitude != null);
-    //             // console.log("PICS GPS: ", picsWithGpsInfo)
-    //             // console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLatitude)
-    //             // console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLongitude)
-    //             // console.log("data[0]: ", res.data[0].GPSLatitude)
-    //             let middlePoint = picsWithGpsInfo.length / 2;
-    //             console.log("middlePoint ", middlePoint);
-    //             this.setState({
-    //                 // onClickButton: true,
-    //                 showmap: true,
-    //                 mapWalkId: walkId,
-    //                 images: picsWithGpsInfo,
-    //                 currentLocation: {
-    //                     lat: parseFloat(picsWithGpsInfo[middlePoint].image.GPSLatitude),
-    //                     lng: parseFloat(picsWithGpsInfo[middlePoint].image.GPSLongitude)
-    //                 }
+                let picsWithGpsInfo = res.data.filter(image => image.image.GPSLatitude != null);
+                // console.log("PICS GPS: ", picsWithGpsInfo)
+                // console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLatitude)
+                // console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLongitude)
+                // console.log("data[0]: ", res.data[0].GPSLatitude)
+                this.setState({
+                    // onClickButton: true,
+                    showmap: true,
+                    mapWalkId: walkId,
+                    images: picsWithGpsInfo,
+                    currentLocation: {
+                        lat: parseFloat(picsWithGpsInfo[0].image.GPSLatitude),
+                        lng: parseFloat(picsWithGpsInfo[0].image.GPSLongitude)
+                    }
 
-    //             })
-    //         }).catch(err => {
-    //             console.log(err)
-    //         });
-    // };
+                })
+            }).catch(err => {
+                console.log(err)
+            });
+    };
 
     handleOnClickMap = (walkId) => {
 
@@ -172,16 +170,15 @@ class TodayWalks extends Component {
             .then(res => {
 
                 console.log("path points:", res.data)
-                let middlePoint = res.data.length / 2;
-                console.log("middlePoint ", middlePoint);
+
                 this.setState({
                     // onClickButton: true,
                     walkPoints: res.data,
                     showmap: true,
                     mapWalkId: walkId,
                     currentLocation: {
-                        lat: parseFloat(res.data[middlePoint].lat),
-                        lng: parseFloat(res.data[middlePoint].lng)
+                        lat: parseFloat(res.data[0].lat),
+                        lng: parseFloat(res.data[0].lng)
                     }
 
                 })
@@ -265,7 +262,7 @@ class TodayWalks extends Component {
 
                     navigator.geolocation.getCurrentPosition(success, error, options);
 
-                }, 120000);
+                }, 180000);
 
 
                 API.updateCheckInOut("in", walkId, coords.latitude, coords.longitude, dogData)
@@ -693,7 +690,7 @@ class TodayWalks extends Component {
                 </div>
                 {this.state.mapWalkId ? (
                     <div className="TodayWalks__past--map" style={{ display: "flex" }}>
-                        <div className="TodayWalks__past--mapmap" style={{ height: '50vh', width: '100%' }}>
+                        <div className="TodayWalks__past--mapmap" style={{ height: '50vh', width: '50%' }}>
                             <GoogleMapReact
                                 bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
                                 // defaultCenter={this.state.currentLocation}
@@ -741,10 +738,10 @@ class TodayWalks extends Component {
                                     ))}
                             </GoogleMapReact>
                         </div>
-                        {/* <div className="TodayWalks__past--mapimage">
+                        <div className="TodayWalks__past--mapimage">
                             {this.state.activeImage ?
                                 <img width={'300px'} src={this.state.activeImage}></img> : null}
-                        </div> */}
+                        </div>
                     </div>
 
                 ) : null}

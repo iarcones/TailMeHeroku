@@ -17,6 +17,13 @@ class WalkerProfileInfo extends Component {
         })
     }
 
+    handleCancelEdit = event => {
+        event.preventDefault();
+        this.setState({
+            editClick: false
+        })
+    }
+
     checkUploadResult = (result) => {
        
         if (result.event === 'success') {
@@ -49,7 +56,12 @@ class WalkerProfileInfo extends Component {
         if (editClick) {
 
             return (
-                <div>
+
+                <div className="main-content">
+
+               
+                    <button className="photos__gallery--btn" onClick={this.handleCancelEdit}>Cancel</button>
+
                     <div className="main-content-userEdition__title">Update My Info</div>
                     <div className="main-content-userEdition">
 
@@ -58,6 +70,7 @@ class WalkerProfileInfo extends Component {
                                 username={this.props.username}
                                 firstName={this.props.firstName}
                                 lastName={this.props.lastName}
+                                profilePhotoURL={this.props.profilePhotoURL}
                                 userType={this.props.username}
                                 aboutMe={this.props.aboutMe}
                                 address={this.props.address}
@@ -91,12 +104,13 @@ class WalkerProfileInfo extends Component {
 
             return (
 
-                <div>
+                <div className="main-content">
 
                     <WalkerUserInfo
                         username={this.props.username}
                         firstName={this.props.firstName}
                         lastName={this.props.lastName}
+                        profilePhotoURL={this.props.profilePhotoURL}
                         userType={this.props.username}
                         aboutMe={this.props.aboutMe}
                         address={this.props.address}
@@ -109,11 +123,10 @@ class WalkerProfileInfo extends Component {
                         bond={this.props.bond}
                         services={this.props.services}
                         availibility={this.props.availibility}
-
+                        handleEditUserClick={this.handleEditUserClick}
+                        showWidget={this.showWidget}
                     />
-                    <button className="photos__gallery--btn" onClick={this.handleEditUserClick}>Edit My Info</button>
-                    <button className="photos__upload--btn"onClick={this.showWidget}>Upload Profile Picture</button>
-                
+
                 </div>
             );
         }

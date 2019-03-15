@@ -7,12 +7,14 @@ import "../../index.css";
 
 
 function WalkerUserInfo(props) {
+    console.log("WalkerUserInfo:", props)
    
     return (
         <div className="walker-main-content">
             <div className="walker-main-content__title">{props.userType} Profile</div>
             <div className="walker-main-content__subtitle">{props.firstName}  {props.lastName}</div>
             <div className="walker-main-content__availibility">{props.availibility}</div>
+            <div className="walker-main-content__profilePhoto"><img className="walker-main-content__profilePhoto--image"src={props.profilePhotoURL}  ></img></div>
             <div className="walker-main-content__body">
                 {/* <div className="main-content__body--profileimg"><img src={`data:image/jpeg;Base64,${this.state.profilePhoto}`} /></div> */}
                 {/* <div className="walker-main-content__body--firstNameLabel">First Name:</div> */}
@@ -22,6 +24,7 @@ function WalkerUserInfo(props) {
             <div className="walker-main-content__body--userTypeLabel">User Type:</div>
             <div className="walker-main-content__body--userTypeInput">{props.userType}</div> */}
                 <div className="walker-main-content__body--aboutMeLabel">About me:</div>
+                {/* <div><img src="http://res.cloudinary.com/viaro-networks-inc/image/upload/v1552544141/IMG_5409_zcbfmg.jpg" width="300" height="150"></img></div> */}
                 <div className="walker-main-content__body--aboutMeInput">{props.aboutMe}</div>
                 <div className="walker-main-content__body--addressLabel">Address:</div>
                 <div className="walker-main-content__body--addressInput">{props.address}</div>
@@ -43,6 +46,8 @@ function WalkerUserInfo(props) {
                 <div className="walker-main-content__body--servicesInput">{props.services}</div>
                 {/* <div className="walker-main-content__body--availibilityLabel">Availibility:</div>
             <div className="walker-main-content__body--availibilityInput">{props.availibility}</div> */}
+            <button className="photos__gallery--btn" onClick={props.handleEditUserClick}>Edit My Info</button>
+            <button className="photos__upload--btn"onClick={props.showWidget}>Upload Profile Picture</button>
             </div>
 
             
