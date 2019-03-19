@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../Grid";
-import { List, ListItem } from "../List";
 import API from "../../utils/API";
 import Moment from "moment";
 import GoogleMapReact from "google-map-react"
@@ -22,7 +20,7 @@ const AnyReactComponent = ({ id, icon, imageClick, lat, lng }) => (
         borderRadius: '100%',
         transform: 'translate(-50%, -50%)',
     }}
-        // onClick={() => imageClick(id)}
+    // onClick={() => imageClick(id)}
     >
         <img src={icon}></img>
 
@@ -91,38 +89,6 @@ class ownerWalks extends Component {
             .catch(err => console.log(err));
     };
 
-    // handleOnClick = (walkId) => {
-    //     console.log("walkId", walkId)
-    //     API.getImagesWalk(walkId)
-    //         .then(res => {
-    //             console.log("back from getpics")
-    //             console.log("getpics: ", res.data)
-    //             // this.setState({
-    //             //   walks: res.data
-    //             // });
-    //             let picsWithGpsInfo = res.data.filter(image => image.image.GPSLatitude != null)
-    //             //   console.log("PICS GPS: ", picsWithGpsInfo)
-    //             //   console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLatitude)
-    //             //   console.log("PICS GPS loc: ", picsWithGpsInfo[0].image.GPSLongitude)
-    //             //console.log("data[0]: ", res.data[0].GPSLatitude)
-    //             this.setState({
-    //                 onClickButton: true,
-    //                 walkId: walkId,
-    //                 images: picsWithGpsInfo,
-    //                 // currentLocation: {
-    //                 //     lat: parseFloat(picsWithGpsInfo[0].image.GPSLatitude),
-    //                 //     lng: parseFloat(picsWithGpsInfo[0].image.GPSLongitude)
-    //                 // },
-    //                 currentLocation: {
-    //                     lat: parseFloat(picsWithGpsInfo[0].image.GPSLatitude),
-    //                     lng: parseFloat(picsWithGpsInfo[0].image.GPSLongitude)
-    //                 }
-    //             })
-    //         }).catch(err => {
-    //             console.log(err)
-    //         });
-
-    // };
     handleOnClickMap = (walkId) => {
 
         API.getPath(walkId)
@@ -223,13 +189,13 @@ class ownerWalks extends Component {
             accessor: 'totalTime',
             Cell: props => <span>{props.value}</span>
         },
-        {
+        // {
             // id: 'notes',
-            Header: 'Notes',
+            // Header: 'Notes',
             // // accessor: data => data.checkInTime,
             // // accessor: 'checkInTime',
             // Cell: row => <div><button className="TodayWalks__past--list-publish-button" onClick={this.handleOnClickNote.bind(this, row.original.id, row.original.dogName, row.original.dogOwnerName, row.original.dogOwnerEmail, true, Moment(row.original.checkOutTime, "YYYY-MM-DD  HH:mm:ss").format("MM/DD/YYYY - HH:mm"))}>Review Walk Notes</button></div>
-        },
+        // },
         {
             // id: '?????',
             Header: 'Map the Walk',

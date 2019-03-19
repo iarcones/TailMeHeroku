@@ -273,7 +273,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #4d4d4d;
-  color: #e6e6e6;
+  color: #f7f7f7;
   font-family: "Thasadith", sans-serif; }
 
 html {
@@ -314,7 +314,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #e6e6e6;
+  color: #f7f7f7;
   outline: none; }
 
 a:link {
@@ -338,7 +338,7 @@ a:active {
   outline: none; }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #e6e6e6; }
+  -webkit-box-shadow: inset 0 0 0px 9999px #f7f7f7; }
 
 button, input[type="submit"], input[type="reset"] {
   background: none;
@@ -567,7 +567,7 @@ a {
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       background-color: #333333;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
   .Contact__lastName {
     font-size: 2.5em;
     grid-area: 2/3;
@@ -584,7 +584,7 @@ a {
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       background-color: #333333;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
   .Contact__userType {
     font-size: 2.5em;
     grid-area: 3/2/3/4;
@@ -601,7 +601,7 @@ a {
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       background-color: #333333;
-      color: #e6e6e6;
+      color: #f7f7f7;
       text-decoration: none;
       outline: none; }
   .Contact__textArea {
@@ -620,7 +620,7 @@ a {
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       background-color: #333333;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
   .Contact__link--button {
     grid-area: 5/3;
     justify-self: right;
@@ -638,7 +638,7 @@ a {
     text-shadow: 2px 2px 8px #1190cb; }
 
 .sidebar {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   border: solid 0.25em #1190cb;
   border-radius: 1em;
   display: grid;
@@ -762,38 +762,35 @@ a {
       padding: 0.25em 1em; }
 
 .TodayWalks {
+  width: 100%;
   font-size: 2em;
   color: #1a1a1a;
-  background-color: #e6e6e6;
+  background-color: #f7f7f7;
   border-radius: .25em;
   display: grid;
   grid-template-columns: 15 1fr;
-  grid-template-rows: auto auto; }
+  grid-template-rows: auto; }
   .TodayWalks__reactTableUpcoming {
     grid-area: 1/1/2/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
+    padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .TodayWalks__reactTableUpcoming--title {
       color: #1190cb;
       font-size: 2em;
       font-family: "Mouse Memoirs", sans-serif;
       margin-left: 1em; }
     .TodayWalks__reactTableUpcoming--table {
-      display: flex;
-      flex-wrap: wrap;
       width: 100%; }
   .TodayWalks__reactTablePast {
     grid-area: 2/1/3/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
+    padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .TodayWalks__reactTablePast--title {
       color: #1190cb;
       font-size: 2em;
@@ -808,8 +805,7 @@ a {
     margin: 1em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto auto auto auto;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    grid-template-rows: 1fr auto auto auto auto auto; }
     .TodayWalks__upcoming--title {
       color: #1190cb;
       font-size: 3em;
@@ -820,7 +816,7 @@ a {
       font-size: 1em;
       margin: .25em; }
     .TodayWalks__upcoming--list-publish-button {
-      color: #e6e6e6;
+      color: #f7f7f7;
       font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
       border: solid 2px #e7f6fd;
@@ -837,8 +833,7 @@ a {
     border-radius: 1em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .TodayWalks__past--title {
       color: #1190cb;
       font-size: 3em;
@@ -849,7 +844,7 @@ a {
       font-size: 1em;
       margin: .25em; }
     .TodayWalks__past--list-publish-button {
-      color: #e6e6e6;
+      color: #f7f7f7;
       font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
       border: solid 2px #e7f6fd;
@@ -859,26 +854,15 @@ a {
       grid-area: 3/1/4/16;
       margin: 1em;
       padding: 1em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .TodayWalks__past--mapmap {
-      background-color: #1a1a1a;
-      margin: 1em;
-      padding: 0.2em;
-      border: solid 2px #1190cb;
-      border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .TodayWalks__past--mapimage {
       background-color: #1a1a1a;
-      margin: 1em;
       padding: 0.2em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
 
 .pagination-bottom {
   background-color: #e7f6fd;
@@ -896,13 +880,11 @@ a {
   grid-template-rows: auto; }
   .ownerWalks__reactTableUpcoming {
     grid-area: 1/1/2/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
     padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .ownerWalks__reactTableUpcoming--title {
       color: #1190cb;
       font-size: 2em;
@@ -912,13 +894,11 @@ a {
       width: 100%; }
   .ownerWalks__reactTablePast {
     grid-area: 2/1/3/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
     padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .ownerWalks__reactTablePast--title {
       color: #1190cb;
       font-size: 2em;
@@ -946,7 +926,7 @@ a {
       font-size: 1em;
       margin: .25em; }
     .ownerWalks__upcoming--list-publish-button {
-      color: #e6e6e6;
+      color: #f7f7f7;
       font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
       border: solid 2px #e7f6fd;
@@ -976,7 +956,7 @@ a {
       font-size: 1em;
       margin: .25em; }
     .ownerWalks__past--list-publish-button {
-      color: #e6e6e6;
+      color: #f7f7f7;
       font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
       border: solid 2px #e7f6fd;
@@ -986,26 +966,19 @@ a {
       grid-area: 3/1/4/16;
       margin: 1em;
       padding: 1em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .ownerWalks__past--mapmap {
-      background-color: #1a1a1a;
-      margin: 1em;
       padding: 0.2em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .ownerWalks__past--mapimage {
       background-color: #1a1a1a;
       margin: 1em;
       padding: 0.2em;
       border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
 
 .rdtPicker {
   margin: 2em;
@@ -1272,7 +1245,7 @@ button.css-48ayfv {
   border-radius: 1em 1em 0em 0em; }
 
 .RRT__tab.tab.RRT__tab--selected {
-  background-color: #e6e6e6;
+  background-color: #f7f7f7;
   color: #1190cb; }
 
 .RRT__container {
@@ -1284,7 +1257,7 @@ button.css-48ayfv {
 
 .RRT__panel.panel {
   width: 100%;
-  background-color: #e6e6e6;
+  background-color: #f7f7f7;
   border: 2px solid #1190cb;
   border-radius: 0em 1em 1em 1em; }
 
@@ -1334,7 +1307,7 @@ button.css-48ayfv {
   .walkernav__logo {
     justify-self: center;
     grid-area: l;
-    background-image: radial-gradient(#e6e6e6, #808080);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: .5em;
     padding: 0em 3em; }
@@ -1343,7 +1316,7 @@ button.css-48ayfv {
   .walkernav__splash {
     justify-self: right;
     grid-area: s;
-    background-image: radial-gradient(#e6e6e6, #808080);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: .5em 0em 0em .5em;
     padding: 0em 5em; }
@@ -1362,7 +1335,7 @@ button.css-48ayfv {
   .walkernav__contact {
     justify-self: left;
     grid-area: c;
-    background-image: radial-gradient(#e6e6e6, #808080);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: 0em .5em .5em 0em;
     padding: 0em 5em; }
@@ -1380,7 +1353,7 @@ button.css-48ayfv {
     border-color: #e7f6fd; }
 
 .walkerContact {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   height: 90%;
@@ -1531,13 +1504,12 @@ button.css-48ayfv {
     .topBarOwner__brand--logo {
       height: 4em;
       font-size: 1em;
-      border: solid 0.25em #1190cb;
       border-radius: 1em;
       padding: 1.5em; }
     .topBarOwner__brand--logotooltip {
       visibility: hidden;
       background-color: #1190cb;
-      color: #e6e6e6;
+      color: #f7f7f7;
       text-align: center;
       font-size: 1em;
       position: absolute;
@@ -1630,7 +1602,7 @@ button.css-48ayfv {
       height: 1.5em; }
 
 .topBarWalker {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #dcdcdc);
   border: solid 0.25em #1190cb;
   border-radius: 1em;
   display: grid;
@@ -1649,26 +1621,25 @@ button.css-48ayfv {
     .topBarWalker__brand--logo {
       height: 4em;
       font-size: 1em;
-      border: solid 0.25em #1190cb;
       border-radius: 1em;
       padding: 1.5em; }
     .topBarWalker__brand--logotooltip {
       visibility: hidden;
       background-color: #1190cb;
-      color: #e6e6e6;
+      color: #f7f7f7;
       text-align: center;
       font-size: 1em;
       position: absolute;
       z-index: 1; }
     .topBarWalker__brand--logo:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
   .topBarWalker__nav {
     grid-area: 1/3;
     font-size: 2.5em;
     display: grid;
-    grid-template-columns: 10 1fr;
+    grid-template-columns: 9 1fr;
     grid-template-rows: 1fr;
-    justify-content: center; }
+    justify-content: right; }
     .topBarWalker__nav--itemLink {
       font-style: bold;
       color: black; }
@@ -1685,7 +1656,7 @@ button.css-48ayfv {
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemDashboard:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--profile {
       height: 1.5em;
       outline: none;
@@ -1701,7 +1672,7 @@ button.css-48ayfv {
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemWalks:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--walks {
       height: 1.5em; }
     .topBarWalker__nav--itemSchedWalks {
@@ -1715,10 +1686,10 @@ button.css-48ayfv {
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemSchedWalks:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--schedule {
       height: 1.5em; }
-    .topBarWalker__nav--itemFullSchedule {
+    .topBarWalker__nav--itemInvite {
       grid-area: 1/6;
       padding: .5em 1.5em;
       background-color: transparent;
@@ -1728,9 +1699,11 @@ button.css-48ayfv {
       box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
-    .topBarWalker__nav--itemFullSchedule:hover {
-      background-color: #e6e6e6; }
-    .topBarWalker__nav--itemInvite {
+    .topBarWalker__nav--itemInvite:hover {
+      background-color: #f7f7f7; }
+    .topBarWalker__nav--invite {
+      height: 1.5em; }
+    .topBarWalker__nav--itemGallery {
       grid-area: 1/7;
       padding: .5em 1.5em;
       background-color: transparent;
@@ -1740,11 +1713,11 @@ button.css-48ayfv {
       box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
-    .topBarWalker__nav--itemInvite:hover {
-      background-color: #e6e6e6; }
-    .topBarWalker__nav--invite {
+    .topBarWalker__nav--itemGallery:hover {
+      background-color: #f7f7f7; }
+    .topBarWalker__nav--images {
       height: 1.5em; }
-    .topBarWalker__nav--itemCerts {
+    .topBarWalker__nav--itemLogout {
       grid-area: 1/8;
       padding: .5em 1.5em;
       background-color: transparent;
@@ -1754,50 +1727,8 @@ button.css-48ayfv {
       box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
-    .topBarWalker__nav--itemCerts:hover {
-      background-color: #e6e6e6; }
-    .topBarWalker__nav--certification {
-      height: 1.5em; }
-    .topBarWalker__nav--itemMap {
-      grid-area: 1/9;
-      padding: .5em 1.5em;
-      background-color: transparent;
-      border-radius: .5em;
-      border: solid 2px #1190cb;
-      margin: .25em .25em;
-      box-shadow: 0 0 12px #a6a6a6;
-      outline: none;
-      text-decoration: none; }
-    .topBarWalker__nav--itemMap:hover {
-      background-color: #e6e6e6; }
-    .topBarWalker__nav--map {
-      height: 1.5em; }
-    .topBarWalker__nav--itemNotifications {
-      grid-area: 1/10;
-      padding: .5em 1.5em;
-      background-color: transparent;
-      border-radius: .5em;
-      border: solid 2px #1190cb;
-      margin: .25em .25em;
-      box-shadow: 0 0 12px #a6a6a6;
-      outline: none;
-      text-decoration: none; }
-    .topBarWalker__nav--itemNotifications:hover {
-      background-color: #e6e6e6; }
-    .topBarWalker__nav--images {
-      height: 1.5em; }
-    .topBarWalker__nav--itemLogout {
-      grid-area: 1/11;
-      padding: .5em 1.5em;
-      background-color: transparent;
-      border-radius: .5em;
-      border: solid 2px #1190cb;
-      margin: .25em .25em;
-      box-shadow: 0 0 12px #a6a6a6;
-      outline: none;
-      text-decoration: none; }
     .topBarWalker__nav--itemLogout:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--logout {
       height: 1.5em; }
 
@@ -1811,11 +1742,54 @@ button.css-48ayfv {
       color: #1190cb;
       font-size: 3em; }
 
-.main-content-profile {
-  height: 100%;
+.main-content-userEdition {
   display: grid;
-  grid-template-columns: 1fr auto 1fr 1fr;
-  grid-template-rows: auto 1fr  auto;
+  grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+  grid-template-rows: 1fr auto  auto;
+  margin: 2em; }
+
+.main-content-userEdition__title {
+  grid-area: 1/2/2/4;
+  font-family: "Mouse Memoirs", sans-serif;
+  padding: 1em;
+  color: #1190cb;
+  font-size: 7em;
+  justify-self: center;
+  align-self: center; }
+
+.main-content-userEdition__cancel {
+  grid-area: 1/3;
+  justify-self: right;
+  align-self: center; }
+  .main-content-userEdition__cancel--button {
+    padding: 1em 3em;
+    border-radius: 1em;
+    border: solid 2px #1190cb;
+    margin: 1em 0em;
+    outline: none;
+    text-decoration: none; }
+  .main-content-userEdition__cancel--button:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 0 12px #7ECEFF;
+    outline: none;
+    text-decoration: none; }
+  .main-content-userEdition__cancel--cancelEditIcon {
+    height: 5em; }
+
+.main-content-userEditionprofile__form {
+  color: #1a1a1a;
+  grid-area: 2/2/3/4;
+  display: flex; }
+
+.main-content-userEditionCert__form {
+  color: #1a1a1a;
+  grid-area: 3/2/4/4;
+  display: flex; }
+
+.main-content-profile {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 1fr auto  auto;
   margin: 2em; }
 
 .main-content-profile__title {
@@ -1830,7 +1804,7 @@ button.css-48ayfv {
   grid-area: 1/2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr auto 1fr 1fr auto;
   grid-gap: 1em; }
 
 .main-content-profile__form--firstNameLabel {
@@ -1847,7 +1821,6 @@ button.css-48ayfv {
   border: solid 2px #a6a6a6;
   border-radius: .5em;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1859,14 +1832,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--lastNameInput {
   grid-area: 2/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1878,14 +1850,14 @@ button.css-48ayfv {
 
 .main-content-profile_form--aboutInput {
   grid-area: 3/2;
+  box-sizing: border-box;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1897,14 +1869,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--addressInput {
   grid-area: 4/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1916,14 +1887,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--cityInput {
   grid-area: 5/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1935,14 +1905,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--stateInput {
   grid-area: 6/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1954,14 +1923,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--zipInput {
   grid-area: 7/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1973,21 +1941,20 @@ button.css-48ayfv {
 
 .main-content-profile__form--countryInput {
   grid-area: 8/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
 
 .main-content-profile__form--button {
   grid-area: 9/2;
-  justify-self: center;
+  justify-self: right;
   font-family: "Thasadith", sans-serif;
   padding: .8em .5em;
   font-size: 2em;
@@ -2003,43 +1970,6 @@ button.css-48ayfv {
   letter-spacing: 0.1em;
   color: #1190cb;
   text-shadow: 2px 2px 8px #1190cb; }
-
-.main-content-certArea__form {
-  color: #1a1a1a;
-  grid-area: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
-
-.main-content-userEdition {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr  auto;
-  margin: 2em; }
-
-.main-content-userEdition__title {
-  font-family: "Mouse Memoirs", sans-serif;
-  padding: 1em;
-  color: #1190cb;
-  font-size: 5em; }
-
-.main-content-userEditionprofile__form {
-  color: #1a1a1a;
-  grid-area: 1/2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
-
-.main-content-userEditionCert__form {
-  color: #1a1a1a;
-  grid-area: 1/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
 
 .aboutTailMe {
   background-image: radial-gradient(#4d4d4d, #333333); }
@@ -2102,7 +2032,7 @@ button.css-48ayfv {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
+    color: #f7f7f7;
     background-color: #333333;
     padding: 1em 1em;
     border-radius: .5em;
@@ -2130,7 +2060,7 @@ button.css-48ayfv {
     grid-area: c;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
+    color: #f7f7f7;
     background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
@@ -2145,7 +2075,7 @@ button.css-48ayfv {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
+    color: #f7f7f7;
     background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
@@ -2173,7 +2103,7 @@ button.css-48ayfv {
     grid-area: c;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
+    color: #f7f7f7;
     background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
@@ -2188,7 +2118,7 @@ button.css-48ayfv {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
+    color: #f7f7f7;
     background-color: #333333;
     border-radius: .5em;
     padding: 1em 2em;
@@ -2307,7 +2237,7 @@ button.css-48ayfv {
       grid-area: 3/2; }
 
 .walkerSignup {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2444,7 +2374,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2740,7 +2670,7 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .walkerProfile {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -3010,21 +2940,21 @@ button.css-48ayfv {
     grid-gap: 2em; }
     .walkerDash__grid--header {
       grid-area: 1/1/2/16;
-      background-image: radial-gradient(#e6e6e6, #808080);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
       border-radius: 1em;
       box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
     .walkerDash__grid--main-content {
       display: flex;
       padding: .4em;
-      background-image: radial-gradient(#e6e6e6, #808080);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
       border-radius: 1em;
       grid-area: 2/1/3/16;
       box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
     .walkerDash__grid--footer {
       grid-area: 3/1/4/16;
-      background-image: radial-gradient(#e6e6e6, #808080);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
       border-radius: 1em;
       box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
@@ -3050,155 +2980,147 @@ button.css-48ayfv {
     .main-content__body--firstNameInput {
       grid-area: 1/3;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--lastNameLabel {
       grid-area: 1/4;
       justify-self: right; }
     .main-content__body--lastNameInput {
       grid-area: 1/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--userTypeLabel {
       grid-area: 2/3;
       justify-self: right; }
     .main-content__body--userTypeInput {
       grid-area: 2/4;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--aboutMeLabel {
       grid-area: 3/2;
       justify-self: right; }
     .main-content__body--aboutMeInput {
       grid-area: 3/3/4/6;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--addressLabel {
       grid-area: 4/2;
       justify-self: right; }
     .main-content__body--addressInput {
       grid-area: 4/3/5/6;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--cityLabel {
       grid-area: 5/2;
       justify-self: right; }
     .main-content__body--cityInput {
       grid-area: 5/3;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--stateLabel {
       grid-area: 5/4;
       justify-self: right; }
     .main-content__body--stateInput {
       grid-area: 5/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--countryLabel {
       grid-area: 7/4;
       justify-self: right; }
     .main-content__body--countryInput {
       grid-area: 7/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--zipcodeLabel {
       grid-area: 6/4;
       justify-self: right; }
     .main-content__body--zipcodeInput {
       grid-area: 6/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
 
 .walker-main-content {
   background-color: transparent;
   margin: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr auto; }
+  grid-template-rows: 1fr 1fr auto auto; }
   .walker-main-content__title {
-    grid-area: 1/2;
-    font-family: "Mouse Memoirs", sans-serif;
-    color: #1190cb;
-    font-size: 5em;
-    text-align: center; }
-  .walker-main-content__subtitle {
-    grid-area: 2/2;
-    font-family: "Over the Rainbow", cursive;
+    grid-area: 3/2;
+    font-family: "Thasadith", sans-serif;
     color: #1a1a1a;
     font-size: 5em;
+    justify-self: center;
+    align-self: center; }
+  .walker-main-content__subtitle {
+    grid-area: 2/2;
+    font-family: "Mouse Memoirs", sans-serif;
+    color: #1190cb;
+    font-size: 6em;
     text-align: center; }
   .walker-main-content__availibility {
-    grid-area: 1/1/3/2;
+    grid-area: 1/3/3/4;
     text-align: center;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 4em;
     color: #e7f6fd;
     background-color: #7ECEFF;
     border: 0.05em solid #e7f6fd;
-    box-shadow: 0em 0em 0.5em 0.25em #e6e6e6;
+    box-shadow: 0 0 12px #a6a6a6;
     border-radius: 3em;
     padding: 1.5em .8em;
     justify-self: center;
     align-self: center; }
   .walker-main-content__profilePhoto {
-    grid-area: 1/3/3/4;
+    grid-area: 1/1/3/2;
     justify-self: center;
     align-self: center; }
     .walker-main-content__profilePhoto--image {
-      height: 17em; }
-  .walker-main-content__editInfo {
-    grid-area: 3/1; }
-    .walker-main-content__editInfo--button {
-      justify-self: center;
-      font-family: "Thasadith", sans-serif;
-      font-size: 3em;
-      text-align: center;
-      color: #e7f6fd;
-      background-color: #1190cb;
-      padding: .5em 1em;
-      border-radius: .5em;
       border: solid 2px #e7f6fd;
+      border-radius: 1em;
+      box-shadow: 0 0 12px #a6a6a6;
+      height: 20em; }
+  .walker-main-content__editInfo {
+    grid-area: 3/3;
+    justify-self: center; }
+    .walker-main-content__editInfo--button {
+      padding: 1em 3em;
+      border-radius: 1em;
+      border: solid 2px #1190cb;
       margin: 1em 0em;
       box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walker-main-content__editInfo--button:hover {
-      background-color: transparent;
-      letter-spacing: 0.1em;
-      color: #1190cb;
-      text-shadow: 2px 2px 8px #1190cb;
+      background-color: #f7f7f7;
       box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
+    .walker-main-content__editInfo--profileEditIcon {
+      height: 5em; }
   .walker-main-content__photoUpload {
-    grid-area: 3/3; }
+    grid-area: 3/1;
+    justify-self: center; }
     .walker-main-content__photoUpload--button {
-      justify-self: center;
-      font-family: "Thasadith", sans-serif;
-      font-size: 3em;
-      text-align: center;
-      color: #e7f6fd;
-      background-color: #1190cb;
-      padding: .5em 1em;
-      border-radius: .5em;
-      border: solid 2px #e7f6fd;
+      padding: 1em 3em;
+      border-radius: 1em;
+      border: solid 2px #1190cb;
       margin: 1em 0em;
       box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walker-main-content__photoUpload--button:hover {
-      background-color: transparent;
-      letter-spacing: 0.1em;
-      color: #1190cb;
-      text-shadow: 2px 2px 8px #1190cb;
+      background-color: #f7f7f7;
       box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
+    .walker-main-content__photoUpload--addPhotoIcon {
+      height: 5em; }
   .walker-main-content__body {
     grid-area: 4/1/5/4;
     display: grid;
-    font-size: 2.5em;
+    font-size: 3em;
     grid-template-columns: .5fr auto 1fr 1fr  auto .5fr;
-    grid-template-rows: 1fr auto auto auto auto auto 1fr;
+    grid-template-rows: 1fr auto auto auto auto auto auto;
     grid-gap: .5em;
     color: #1190cb; }
     .walker-main-content__body--aboutMeLabel {
@@ -3208,49 +3130,49 @@ button.css-48ayfv {
       grid-area: 1/3/2/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--certificationInput {
-      grid-area: 2/2;
-      justify-self: center;
-      color: #1a1a1a; }
-    .walker-main-content__body--bondInput {
-      grid-area: 3/2;
-      justify-self: center;
-      color: #1a1a1a; }
-    .walker-main-content__body--insuranceInput {
-      grid-area: 4/2;
-      justify-self: center;
-      color: #1a1a1a; }
     .walker-main-content__body--servicesLabel {
-      grid-area: 5/2;
+      grid-area: 2/2;
       justify-self: right;
       color: #1190cb; }
     .walker-main-content__body--servicesInput {
+      grid-area: 2/3/3/5;
+      justify-self: left;
+      color: #1a1a1a; }
+    .walker-main-content__body--qualificationsLabel {
+      grid-area: 3/2;
+      justify-self: right;
+      color: #1190cb; }
+    .walker-main-content__body--certificationInput {
+      grid-area: 3/3/4/5;
+      justify-self: left;
+      color: #1a1a1a; }
+    .walker-main-content__body--insuranceInput {
+      grid-area: 4/3/5/5;
+      justify-self: left;
+      color: #1a1a1a; }
+    .walker-main-content__body--bondInput {
       grid-area: 5/3/6/5;
       justify-self: left;
       color: #1a1a1a; }
     .walker-main-content__body--addressLabel {
-      grid-area: 2/4;
+      grid-area: 6/2;
       justify-self: right;
       color: #1190cb; }
     .walker-main-content__body--addressInput {
-      grid-area: 2/5;
+      grid-area: 6/3/7/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--cityInput {
-      grid-area: 3/5;
-      justify-self: left;
-      color: #1a1a1a; }
-    .walker-main-content__body--stateInput {
-      grid-area: 4/5;
+    .walker-main-content__body--locationInput {
+      grid-area: 7/3;
       justify-self: left;
       color: #1a1a1a; }
     .walker-main-content__body--countryInput {
-      grid-area: 5/5;
+      grid-area: 8/3/9/5;
       justify-self: left;
       color: #1a1a1a; }
     .walker-main-content__body--zipcodeInput {
-      grid-area: 6/5;
-      justify-self: right;
+      grid-area: 8/3/9/5;
+      justify-self: center;
       color: #1a1a1a; }
 
 .main-content {
@@ -3259,18 +3181,18 @@ button.css-48ayfv {
 .main-content-certify {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: auto 1fr  auto;
+  grid-template-columns: .1fr 1fr 1fr .1fr;
+  grid-template-rows: 1fr auto auto;
   margin: 2em; }
   .main-content-certify__title {
-    grid-area: 1/2;
+    grid-area: 1/3;
     font-family: "Mouse Memoirs", sans-serif;
     padding: 1em;
     color: #1190cb;
     font-size: 5em; }
   .main-content-certify__form {
     color: #1a1a1a;
-    grid-area: 2/2;
+    grid-area: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
@@ -3374,7 +3296,7 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .walkerlogin {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -3498,7 +3420,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -3586,13 +3508,13 @@ button.css-48ayfv {
     z-index: -2; }
   .walkersplash__bg--imageshadow {
     width: 100%;
-    box-shadow: inset 0 0 30em 15em #1a1a1a; }
+    box-shadow: inset 0 0 15em 7.5em #4d4d4d; }
     @media only screen and (max-width: 56.25em) {
       .walkersplash__bg--imageshadow {
-        box-shadow: inset 0 0 15em 7.5em #1a1a1a; } }
+        box-shadow: inset 0 0 7.5em 3.75em #4d4d4d; } }
     @media only screen and (max-width: 37.5em) {
       .walkersplash__bg--imageshadow {
-        box-shadow: inset 0 0 7.5em 3.75em #1a1a1a; } }
+        box-shadow: inset 0 0 3.75em 1.375em #4d4d4d; } }
   .walkersplash__bg--subheadingA {
     font-size: 3em;
     color: #e7f6fd;
@@ -3635,7 +3557,7 @@ button.css-48ayfv {
   width: 100%;
   top: 0;
   height: 10em;
-  background: #1a1a1a;
+  background: #1190cb;
   z-index: 2; }
   @media only screen and (max-width: 63.125em) {
     .walkersplash__nav {
@@ -3657,8 +3579,8 @@ button.css-48ayfv {
     text-decoration: none; }
   .walkersplash__nav--userregistration:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--walkerauthentification {
@@ -3675,8 +3597,8 @@ button.css-48ayfv {
     text-decoration: none; }
   .walkersplash__nav--walkerauthentification:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--walkerregistration {
@@ -3692,13 +3614,13 @@ button.css-48ayfv {
     text-decoration: none; }
   .walkersplash__nav--walkerregistration:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
 
 .walkersplash__grid {
-  color: #e6e6e6;
+  color: #f7f7f7;
   display: grid;
   grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
   grid-template-rows: auto 1fr auto auto auto auto 1fr;
@@ -3789,7 +3711,7 @@ button.css-48ayfv {
   justify-content: center; }
 
 .walkeraboutTailMe {
-  background-image: radial-gradient(#e6e6e6, #808080); }
+  background-image: radial-gradient(#f7f7f7, #808080); }
   .walkeraboutTailMe__grid {
     height: 100%;
     display: grid;
@@ -3827,7 +3749,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 4em; }
   .createDog__form {
-    color: #e6e6e6;
+    color: #f7f7f7;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3883,7 +3805,7 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .walkerQualifications {
-  background-image: radial-gradient(#e6e6e6, #808080);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -4026,7 +3948,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
