@@ -92,7 +92,7 @@ class WalkerEditUserInfo extends Component {
         } else {
             return (
                 <div className="main-content-profile">
-                    <div className="main-content-profile__title">Enter your personal information here and tell us about your dog walking service.</div>
+                    <div className="main-content-profile__title"></div>
                     <form className="main-content-profile__form" onSubmit={this.handleWalkerProfile}>
                         <label className="main-content-profile__form--firstNameLabel">First Name:</label>
                         <input className="main-content-profile__form--firstNameInput"
@@ -117,9 +117,8 @@ class WalkerEditUserInfo extends Component {
                             value={this.state.aboutMe}
                             onChange={this.handleInputChange}
                             placeholder="About Me"
-                            rows="14"
-                            cols="10" 
-                            wrap="soft"
+                           /*  rows="10"
+                            cols="30" */
                         />
                         <label className="main-content-profile__form--addressLabel">Address:</label>
                         <input className="main-content-profile__form--addressInput"

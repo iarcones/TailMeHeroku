@@ -4,7 +4,6 @@ import "../../index.css";
 import WalkerUserInfo from "./walkerUserInfo";
 import WalkerEditUserInfo from "./walkerEditUserInfo";
 import WalkerCertification from "./walkerCetrification";
-import cancelEditIcon from "../../images/cancelEditIcon.png";
 
 class WalkerProfileInfo extends Component {
     state = {
@@ -58,15 +57,13 @@ class WalkerProfileInfo extends Component {
 
             return (
 
-                <div className="main-content">             
-                    <div className="main-content-userEdition">
-                        <div className="main-content-userEdition__cancel">
-                            <button className="main-content-userEdition__cancel--button" onClick={this.handleCancelEdit}>
-                            <img className="main-content-userEdition__cancel--cancelEditIcon" src={cancelEditIcon} alt="cancel edit icon"></img>
-                            </button>
-                        </div>
+                <div className="main-content">
 
-                        <div className="main-content-userEdition__title">Update My Info</div>
+               
+                    <button className="photos__gallery--btn" onClick={this.handleCancelEdit}>Cancel</button>
+
+                    <div className="main-content-userEdition__title">Update My Info</div>
+                    <div className="main-content-userEdition">
 
                         <div className="main-content-userEditionprofile__form">
                             <WalkerEditUserInfo
@@ -74,7 +71,7 @@ class WalkerProfileInfo extends Component {
                                 firstName={this.props.firstName}
                                 lastName={this.props.lastName}
                                 profilePhotoURL={this.props.profilePhotoURL}
-                                userType={this.props.userType}
+                                userType={this.props.username}
                                 aboutMe={this.props.aboutMe}
                                 address={this.props.address}
                                 City={this.props.City}
@@ -114,7 +111,7 @@ class WalkerProfileInfo extends Component {
                         firstName={this.props.firstName}
                         lastName={this.props.lastName}
                         profilePhotoURL={this.props.profilePhotoURL}
-                        userType={this.props.userType}
+                        userType={this.props.username}
                         aboutMe={this.props.aboutMe}
                         address={this.props.address}
                         City={this.props.City}
