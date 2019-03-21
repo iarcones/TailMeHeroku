@@ -232,7 +232,7 @@ class TodayWalks extends Component {
 
                 // set the timmer record walk geolocation points 
                 this.intervalID = setInterval(() => {
-                    // console.log("recpath", walkId)
+                    console.log("recpath", walkId)
                     let options = {
                         enableHighAccuracy: true,
                         timeout: 5000,
@@ -263,7 +263,7 @@ class TodayWalks extends Component {
 
                     navigator.geolocation.getCurrentPosition(success, error, options);
 
-                }, 120000);
+                }, 60000);
 
 
                 API.updateCheckInOut("in", walkId, coords.latitude, coords.longitude, dogData)
