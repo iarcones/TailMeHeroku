@@ -1,6 +1,6 @@
 # ![Icon](logo.png)
 
-## *A Management System Designed for Dog Walkers*   
+## *A Management System Designed for Dog Walkers*
 
 ### The following project is a collaboration built with React.js to provide professional dog walkers a better way to manage their own business.
 

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Gallery from 'react-grid-gallery';
 import GoogleMapReact from "google-map-react"
-//doggallery
 
 
 
