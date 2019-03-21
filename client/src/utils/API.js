@@ -26,7 +26,7 @@ export default {
 
     //User Profile
     getUserProfile: function (id) {
-        console.log(id)
+        // console.log(id)
         return axios.get(`/api/userProfile/${id}`);
     },
 
@@ -156,5 +156,8 @@ export default {
     uploadProfilePicture: function (userId, data) {
         console.log("API-uploadProfilePicture", userId, data)
         return axios.put(`/api/walker/uploadProfilePicture/${userId}`, data) 
+    },
+    getWalkers: function () {
+        return axios.get(`/api/walker/getWalkersList`)
     }
 };

@@ -15,6 +15,9 @@
             animation-name: movingT;
             animation-duration: 20s;
             animation-timing-function: ease;
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
         }
         &--headinga{
             font-family: $font-headingC;
@@ -25,7 +28,10 @@
             transform: translate(-50%, -50%);
             animation-name: movinga;
             animation-duration: 20s;
-            animation-timing-function: ease; 
+            animation-timing-function: ease;
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              } 
         }
         &--headingi{
             font-family: $font-headingC;
@@ -37,6 +43,9 @@
             animation-name: movingi;
             animation-duration: 20s;
             animation-timing-function: ease; 
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
         }
         &--headingl{
             font-family: $font-headingC;
@@ -48,6 +57,9 @@
             animation-name: movingl;
             animation-duration: 20s;
             animation-timing-function: ease; 
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
         }
         &--headingm{
             font-family: $font-headingC;
@@ -59,6 +71,9 @@
             animation-name: movingm;
             animation-duration: 20s;
             animation-timing-function: ease-out; 
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
         }
         &--headinge{
             font-family: $font-headingC;
@@ -70,6 +85,9 @@
             animation-name: movinge;
             animation-duration: 20s;
             animation-timing-function: ease-out; 
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
         }
         &--image{
             width: 100%;
@@ -78,12 +96,12 @@
         }
         &--imageshadow {
             width: 100%;
-            box-shadow: inset 0 0 30em 15em $color-darkest;
+            box-shadow: inset 0 0 15em 7.5em $color-medium;
             @include responsive(t-port) { // width < 900
-                box-shadow: inset 0 0 15em 7.5em $color-darkest;
+                box-shadow: inset 0 0 7.5em 3.75em $color-medium;
             }
             @include responsive(phone) { // width < 600
-                box-shadow: inset 0 0 7.5em 3.75em $color-darkest;
+                box-shadow: inset 0 0 3.75em 1.375em $color-medium;
             }
 
         }
@@ -97,6 +115,9 @@
             animation-name: subheadingFade;
             animation-duration: 20s;
             animation-timing-function: ease;
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
 
         }
         &--subheadingB{
@@ -109,6 +130,9 @@
             animation-name: subheadingFade;
             animation-duration: 20s;
             animation-timing-function: ease;
+            @include responsive(t-port) { // width < 900?
+                animation-name: none; //1rem = 8px 8/16 = 50%
+              }
             
         }
         &--icon{
@@ -134,7 +158,7 @@
         width: 100%;
         top: 0;
         height: 10em;
-        background: $color-darkest;
+        background: $color-accentOne;
         z-index: 2;
         @include responsive(t-port-mid-land) { // width < 1010
             height: 6em; 
@@ -142,6 +166,7 @@
         @include responsive(t-port-phone) { // width < 760
             height: 4em; 
         }
+            
             &--userregistration{
                 float: right;
                 font-family: $font-sans;
@@ -157,8 +182,8 @@
             }
             &--userregistration:hover{
                 background-color: transparent;
-                color: $color-accentOne;
-                text-shadow: 2px 2px 8px $color-accentOne;
+                color: $color-darkest;
+                text-shadow: 2px 2px 8px $color-accentWhite;
                 outline: none; 
                 text-decoration: none
             }
@@ -180,10 +205,10 @@
             }
             &--walkerauthentification:hover{
                 background-color: transparent;
-                color: $color-accentOne;
-                text-shadow: 2px 2px 8px $color-accentOne;
+                color: $color-darkest;
+                text-shadow: 2px 2px 8px $color-accentWhite;
                 outline: none; 
-                text-decoration: none; 
+                text-decoration: none 
             }
             &--walkerregistration{
                 float: right;
@@ -200,12 +225,13 @@
             }
             &--walkerregistration:hover{
                 background-color: transparent;
-                color: $color-accentOne;
-                text-shadow: 2px 2px 8px $color-accentOne;
+                color: $color-darkest;
+                text-shadow: 2px 2px 8px $color-accentWhite;
                 outline: none; 
-                text-decoration: none; 
+                text-decoration: none
             }
         }
+
     &__grid{
     color: $color-lightest;
     display:grid;
@@ -313,13 +339,18 @@
 
     }
    
+    &--walkerListText{
+        grid-area: 7/2;
+        font-size: 3em;
+        
+    }
+    
     
 }
-       
-  
+         
     &__footer{
         margin-top: 8em;
-        grid-area: 7/2/8/5;
+        grid-area: 8/2/8/5;
         display: flex;
         justify-content: center;
     }

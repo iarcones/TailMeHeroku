@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Gallery from 'react-grid-gallery';
 import GoogleMapReact from "google-map-react"
+//doggallery
 
 
 
@@ -53,12 +54,9 @@ class DogOwnerGallery extends Component {
         const userId = this.props.userId;
         API.getImagesOwner(userId)
             .then(res => {
-                console.log(res.data[0])
+                // console.log(res.data[0]);
             
                 if (res.data[0]) {
-
-                    // let picsWithGpsInfo = res.data.walkImages.filter(image => image.image.GPSLatitude != null);
-                    // console.log("picsWithGpsInfo:", picsWithGpsInfo)
 
                     const users = res.data[0].walkImages
                     const arrayPhotos = []
@@ -75,20 +73,21 @@ class DogOwnerGallery extends Component {
                         arrayPhotos.push(imageData)
                     })
 
-                    console.log("arrayPhotos: ", arrayPhotos);
+                    // console.log("arrayPhotos: ", arrayPhotos);
                     let picsWithGpsInfo = arrayPhotos.filter(image => image.lat != null);
-                    console.log("picsWithGpsInfo:", picsWithGpsInfo)
+                    // console.log("picsWithGpsInfo:", picsWithGpsInfo);
 
-                    let middlePoint = picsWithGpsInfo.length / 2;
+                    // Floored value for cases where middle point is not an integer
+                    let middlePoint = Math.floor(picsWithGpsInfo.length / 2);
                     
                     this.setState({
                         gallery: arrayPhotos,
-                        // mapWalkId: walkId,
                         images: picsWithGpsInfo,
                         currentLocation: {
                             lat: parseFloat(picsWithGpsInfo[middlePoint].lat),
                             lng: parseFloat(picsWithGpsInfo[middlePoint].lng)
-                        }
+                        },
+                        activeImage: picsWithGpsInfo[middlePoint].src
                     })
 
                 }
@@ -99,9 +98,9 @@ class DogOwnerGallery extends Component {
 
 
     handleImgClick = (id) => {
-        console.log("id: ", id)
+        // console.log("id: ", id)
         let clickWalk = this.state.images.filter(image => image.id === id)
-        console.log(clickWalk)
+        // console.log(clickWalk)
         this.setState({ activeImage: clickWalk[0].src })
     };
 
@@ -111,7 +110,7 @@ class DogOwnerGallery extends Component {
             this.setState({
                 showMap: true,
                 buttonText: "Show Gallery",
-                title: "My Map"
+                title: "Places / Pictures"
             })
         } else {
             this.setState({
@@ -126,9 +125,9 @@ class DogOwnerGallery extends Component {
     render() {
 
         return (
-            <div>
-                <p className="ownerGalleryTitle">{this.state.title}</p>
-                <button className="photos__gallery--btn" onClick={this.handleShowClick}>{this.state.buttonText}</button>
+            <div className="ownerGallery">
+                <button className="ownerGallery__gallery--button" onClick={this.handleShowClick}>{this.state.buttonText}</button>
+                <p className="ownerGallery__Title">{this.state.title}</p>
 
                 {!this.state.showMap ? (
                     <Gallery

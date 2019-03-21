@@ -43,7 +43,8 @@ class ownerWalks extends Component {
         images: [],
         pastWalks: [],
         walkPoints: [],
-        showMap: false
+        showMap: false,
+        trackingAlert: ""
 
     }
     // Life-cycle function that executes when the components mount (page loads)
@@ -60,7 +61,7 @@ class ownerWalks extends Component {
         const id = this.props.OwnerID;
         API.getOwnerId(id)
             .then(res => {
-                console.log("getOwnerId response: ", res.data);
+                // console.log("getOwnerId response: ", res.data);
                 const dataFormat = res.data.map(data => {
                     const start_time = Moment(data.checkInTime);
                     const end_time = Moment(data.checkOutTime);
@@ -94,20 +95,31 @@ class ownerWalks extends Component {
         API.getPath(walkId)
             .then(res => {
 
-                console.log("path points:", res.data)
+                // console.log("path points:", res.data)
+                console.log("res.data.length", res.data.length)
+                let walkStatus = false;
+                let lat = 0;
+                let lng = 0;
+                let middlePoint = Math.floor(res.data.length / 2);
 
-                let middlePoint = res.data.length / 2;
-                console.log("middlePoint ", middlePoint);
+                if (res.data.length !== 0){
+                   walkStatus = true;
+
+                   // console.log("middlePoint ", middlePoint);
+                   lat = parseFloat(res.data[middlePoint].lat);
+                   lng = parseFloat(res.data[middlePoint].lng);
+                }
 
                 this.setState({
                     // onClickButton: true,
                     walkPoints: res.data,
-                    showmap: true,
+                    showmap: walkStatus,
                     mapWalkId: walkId,
                     currentLocation: {
-                        lat: parseFloat(res.data[middlePoint].lat),
-                        lng: parseFloat(res.data[middlePoint].lng)
-                    }
+                        lat: lat,
+                        lng: lng
+                    },
+                    trackingAlert: "Tracking info is not available for this walk"
 
                 })
 
@@ -116,8 +128,8 @@ class ownerWalks extends Component {
             });
     };
     _onChange = ({ center, zoom }) => {
-        console.log("Center", this.state.center)
-        console.log("zoom", this.state.zoom)
+        // console.log("Center", this.state.center);
+        // console.log("zoom", this.state.zoom);
         this.setState({
             currentLocation: center,
             zoom: zoom
@@ -126,9 +138,9 @@ class ownerWalks extends Component {
 
     handleImgClick = (id) => {
 
-        console.log("id: ", id)
+        // console.log("id: ", id);
         let clickWalk = this.state.images.filter(image => image.id === id)
-        console.log(clickWalk)
+        // console.log(clickWalk);
         this.setState({ activeImage: clickWalk[0].image.url })
 
     }
@@ -251,40 +263,40 @@ class ownerWalks extends Component {
                             resizable={true}
                             defaultPageSize={5}
                             minRows={3}
-                            SubComponent={row => {
-                                // SubComponent for accessing original row values
-                                const columns = [
-                                    {
-                                        Header: "Property",
-                                        accessor: "property",
-                                        width: 200,
-                                        Cell: ci => {
-                                            return `${ci.value}:`;
-                                        },
-                                        style: {
-                                            backgroundColor: "#DDD",
-                                            textAlign: "right",
-                                            fontWeight: "bold"
-                                        }
-                                    }
-                                ];
-                                const rowData = Object.keys(row.original).map(key => {
-                                    return {
-                                        property: key,
-                                        value: row.original[key].toString()
-                                    };
-                                });
-                                return (
-                                    <div style={{ padding: "10px", width: "40%" }}>
-                                        <ReactTable
-                                            data={rowData}
-                                            columns={columns}
-                                            pageSize={rowData.length}
-                                            showPagination={false}
-                                        />
-                                    </div>
-                                );
-                            }}
+                            // SubComponent={row => {
+                            //     // SubComponent for accessing original row values
+                            //     const columns = [
+                            //         {
+                            //             Header: "Property",
+                            //             accessor: "property",
+                            //             width: 200,
+                            //             Cell: ci => {
+                            //                 return `${ci.value}:`;
+                            //             },
+                            //             style: {
+                            //                 backgroundColor: "#DDD",
+                            //                 textAlign: "right",
+                            //                 fontWeight: "bold"
+                            //             }
+                            //         }
+                            //     ];
+                            //     const rowData = Object.keys(row.original).map(key => {
+                            //         return {
+                            //             property: key,
+                            //             value: row.original[key].toString()
+                            //         };
+                            //     });
+                            //     return (
+                            //         <div style={{ padding: "10px", width: "40%" }}>
+                            //             <ReactTable
+                            //                 data={rowData}
+                            //                 columns={columns}
+                            //                 pageSize={rowData.length}
+                            //                 showPagination={false}
+                            //             />
+                            //         </div>
+                            //     );
+                            // }}
                         />
                     ) : (
                             <p className="ownerWalks__alert">There are no upcoming walks scheduled.</p>
@@ -329,46 +341,46 @@ class ownerWalks extends Component {
                             resizable={true}
                             defaultPageSize={5}
                             minRows={3}
-                            SubComponent={row => {
-                                // SubComponent for accessing original row values
-                                const columns = [
-                                    {
-                                        Header: "Property",
-                                        accessor: "property",
-                                        width: 200,
-                                        Cell: ci => {
-                                            return `${ci.value}:`;
-                                        },
-                                        style: {
-                                            backgroundColor: "#DDD",
-                                            textAlign: "right",
-                                            fontWeight: "bold"
-                                        }
-                                    }
-                                ];
-                                const rowData = Object.keys(row.original).map(key => {
-                                    return {
-                                        property: key,
-                                        value: row.original[key].toString()
-                                    };
-                                });
-                                return (
-                                    <div style={{ padding: "10px", width: "40%" }}>
-                                        <ReactTable
-                                            data={rowData}
-                                            columns={columns}
-                                            pageSize={rowData.length}
-                                            showPagination={false}
-                                        />
-                                    </div>
-                                );
-                            }}
+                            // SubComponent={row => {
+                            //     // SubComponent for accessing original row values
+                            //     const columns = [
+                            //         {
+                            //             Header: "Property",
+                            //             accessor: "property",
+                            //             width: 200,
+                            //             Cell: ci => {
+                            //                 return `${ci.value}:`;
+                            //             },
+                            //             style: {
+                            //                 backgroundColor: "#DDD",
+                            //                 textAlign: "right",
+                            //                 fontWeight: "bold"
+                            //             }
+                            //         }
+                            //     ];
+                            //     const rowData = Object.keys(row.original).map(key => {
+                            //         return {
+                            //             property: key,
+                            //             value: row.original[key].toString()
+                            //         };
+                            //     });
+                            //     return (
+                            //         <div style={{ padding: "10px", width: "40%" }}>
+                            //             <ReactTable
+                            //                 data={rowData}
+                            //                 columns={columns}
+                            //                 pageSize={rowData.length}
+                            //                 showPagination={false}
+                            //             />
+                            //         </div>
+                            //     );
+                            // }}
                         />
                     ) : (
                             <p className="ownerWalks__alert">No history of previous walks found.</p>
                         )}
                 </div>
-                {this.state.mapWalkId ? (
+                {this.state.showmap ? (
                     <div className="ownerWalks__past--map" style={{ display: "flex" }}>
                         <div className="ownerWalks__past--mapmap" style={{ height: '50vh', width: '100%' }}>
                             <GoogleMapReact
@@ -423,7 +435,7 @@ class ownerWalks extends Component {
                         </div> */}
                     </div>
 
-                ) : null}
+                      ) : <p className="ownerWalks__alert">{this.state.trackingAlert}</p>}
             </div>
         );
     }

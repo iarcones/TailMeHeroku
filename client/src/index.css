@@ -272,9 +272,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: #e6e6e6;
-  font-family: "arial", sans-serif; }
+  background-color: #4d4d4d;
+  color: #f7f7f7;
+  font-family: "Thasadith", sans-serif; }
 
 html {
   font-size: 62.5%; }
@@ -314,7 +314,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #e6e6e6;
+  color: #f7f7f7;
   outline: none; }
 
 a:link {
@@ -338,7 +338,7 @@ a:active {
   outline: none; }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #e6e6e6; }
+  -webkit-box-shadow: inset 0 0 0px 9999px #f7f7f7; }
 
 button, input[type="submit"], input[type="reset"] {
   background: none;
@@ -359,7 +359,7 @@ button, input[type="submit"], input[type="reset"] {
     height: 1.5em; }
 
 .nav {
-  background-image: linear-gradient(white, white);
+  background-color: #1190cb;
   box-shadow: 0em 0em 0.5em 0.5em #1a1a1a;
   display: grid;
   grid-template-columns: 6 1fr;
@@ -367,7 +367,7 @@ button, input[type="submit"], input[type="reset"] {
   .nav__logo {
     justify-self: center;
     grid-area: l;
-    background-color: white;
+    background-color: #333333;
     border-radius: .5em;
     padding: 0em 3em; }
     .nav__logo--image {
@@ -375,13 +375,13 @@ button, input[type="submit"], input[type="reset"] {
   .nav__splash {
     justify-self: right;
     grid-area: s;
-    background-color: white;
+    background-color: #333333;
     border: solid 2px #1a1a1a;
     border-radius: .5em 0em 0em .5em;
     padding: 0em 5em; }
     .nav__splash--link {
       font-size: 2.5em;
-      color: white; }
+      color: #a6a6a6; }
     .nav__splash--link:hover {
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb; }
@@ -393,13 +393,13 @@ button, input[type="submit"], input[type="reset"] {
   .nav__contact {
     justify-self: left;
     grid-area: c;
-    background-color: white;
+    background-color: #333333;
     border: solid 2px #1a1a1a;
     border-radius: 0em .5em .5em 0em;
     padding: 0em 5em; }
     .nav__contact--link {
       font-size: 2.5em;
-      color: white; }
+      color: #a6a6a6; }
     .nav__contact--link:hover {
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb; }
@@ -413,58 +413,74 @@ button, input[type="submit"], input[type="reset"] {
   display: grid;
   grid-template-columns: auto auto auto auto auto; }
 
-.ownerGalleryTitle {
-  text-align: center;
-  font-family: "Mouse Memoirs", sans-serif;
-  font-size: 4em;
-  color: #1190cb; }
+.ownerGallery {
+  width: 100%;
+  font-size: 2em; }
+  .ownerGallery__Title {
+    text-align: center;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 3em;
+    color: #1190cb;
+    margin-top: 0px;
+    margin-bottom: 0.2em; }
+  .ownerGallery__gallery--button {
+    color: #f7f7f7;
+    font-family: "Thasadith", sans-serif;
+    background-color: #1190cb;
+    border: solid 2px #e7f6fd;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    margin-bottom: 0em; }
 
 .fullCalender {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   font-size: 2em;
   margin: 1em; }
 
 .calenderContainer {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   width: 800px;
   padding-left: 6em; }
 
 th.fc-day-header {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 h2 {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 a {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 .css-10nd86i {
   color: #1a1a1a; }
 
 .walkerfullCalender {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   font-size: 2em;
   margin: 1em; }
 
 .walkercalenderContainer {
   grid-area: 1/2;
   margin: 1em;
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   z-index: 0; }
 
 th.fc-day-header {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 h2 {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 a {
-  font-family: "arial", sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #1190cb; }
 
 .css-10nd86i {
@@ -474,11 +490,37 @@ a {
   grid-area: 1/1;
   border: solid 0.25em #1190cb;
   border-radius: 1em;
-  box-shadow: 0em 0em 0.5em 0.5em white;
+  box-shadow: 0em 0em 0.5em 0.5em #4d4d4d;
   margin: 1em; }
 
 .walkerFullscheduleWrap {
   display: grid; }
+
+.walkerFullscheduleWrap__eventModal {
+  width: 100%; }
+  .walkerFullscheduleWrap__eventModal--closeButton {
+    font-family: "Thasadith", sans-serif;
+    padding: .5em 1em;
+    font-size: 3em;
+    text-align: center;
+    color: #e7f6fd;
+    background-color: #1190cb;
+    border-radius: .5em;
+    border: solid 2px #e7f6fd;
+    cursor: pointer; }
+  .walkerFullscheduleWrap__eventModal--closeButton:hover {
+    background-color: transparent;
+    color: #1190cb;
+    text-shadow: 2px 2px 8px #1190cb; }
+  .walkerFullscheduleWrap__eventModal--eventTitle {
+    color: #1190cb;
+    font-size: 6em;
+    font-family: "Mouse Memoirs", sans-serif;
+    text-align: center; }
+  .walkerFullscheduleWrap__eventModal--eventBody {
+    font-family: "Thasadith", sans-serif;
+    font-size: 3em;
+    color: #1a1a1a; }
 
 .photos {
   background-color: transparent;
@@ -488,14 +530,14 @@ a {
   .photos__upload {
     margin: 2em; }
     .photos__upload--btn {
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 1.5em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .photos__upload--btn:hover {
       background-color: transparent;
@@ -504,14 +546,14 @@ a {
   .photos__dropZone {
     margin: 2em; }
     .photos__dropZone--btn {
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 1.5em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .photos__dropZone--btn:hover {
       background-color: transparent;
@@ -520,14 +562,14 @@ a {
   .photos__gallery {
     margin: 2em; }
     .photos__gallery--btn {
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 1.5em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .photos__gallery--btn:hover {
       background-color: transparent;
@@ -535,7 +577,7 @@ a {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .Contact {
-  background-image: radial-gradient(white, white);
+  background-image: radial-gradient(#4d4d4d, #333333);
   display: grid;
   height: 90%;
   grid-template-columns: 1fr 2fr  2fr 1fr;
@@ -561,13 +603,13 @@ a {
       grid-template-rows-margin-right: 1em; }
     .Contact__firstName--input {
       grid-area: 1/2/1/3;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
-      background-color: white;
-      color: #e6e6e6; }
+      background-color: #333333;
+      color: #f7f7f7; }
   .Contact__lastName {
     font-size: 2.5em;
     grid-area: 2/3;
@@ -578,13 +620,13 @@ a {
       grid-template-rows-margin-right: 1em; }
     .Contact__lastName--input {
       grid-area: 1/2/1/3;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
-      background-color: white;
-      color: #e6e6e6; }
+      background-color: #333333;
+      color: #f7f7f7; }
   .Contact__userType {
     font-size: 2.5em;
     grid-area: 3/2/3/4;
@@ -595,13 +637,13 @@ a {
       grid-template-rows-margin-right: 1em; }
     .Contact__userType--input {
       grid-area: 1/2/2/11;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
-      background-color: white;
-      color: #e6e6e6;
+      background-color: #333333;
+      color: #f7f7f7;
       text-decoration: none;
       outline: none; }
   .Contact__textArea {
@@ -614,20 +656,20 @@ a {
       grid-template-rows-justify-self: center; }
     .Contact__textArea--input {
       grid-area: 1/2/2/11;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
-      background-color: white;
-      color: #e6e6e6; }
+      background-color: #333333;
+      color: #f7f7f7; }
   .Contact__link--button {
     grid-area: 5/3;
     justify-self: right;
     font-size: 3em;
     text-align: center;
     color: #1190cb;
-    background-color: white;
+    background-color: #333333;
     padding: .5em 1em;
     border-radius: .5em;
     border: solid 2px #1190cb;
@@ -638,7 +680,7 @@ a {
     text-shadow: 2px 2px 8px #1190cb; }
 
 .sidebar {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #808080);
   border: solid 0.25em #1190cb;
   border-radius: 1em;
   display: grid;
@@ -765,13 +807,15 @@ a {
   width: 100%;
   font-size: 2em;
   color: #1a1a1a;
-  border-radius: .25em;
+  background-color: #f7f7f7;
+  border-radius: 0.25em;
   display: grid;
   grid-template-columns: 15 1fr;
   grid-template-rows: auto; }
   .TodayWalks__reactTableUpcoming {
     grid-area: 1/1/2/16;
     border-radius: 1em;
+    padding: 0.5em;
     margin: 1em;
     display: flex;
     flex-wrap: wrap; }
@@ -785,6 +829,7 @@ a {
   .TodayWalks__reactTablePast {
     grid-area: 2/1/3/16;
     border-radius: 1em;
+    padding: 0.5em;
     margin: 1em;
     display: flex;
     flex-wrap: wrap; }
@@ -797,6 +842,7 @@ a {
       width: 100%; }
   .TodayWalks__upcoming {
     grid-area: 1/1/2/6;
+    border: solid 0.25em #1190cb;
     border-radius: 1em;
     margin: 1em;
     display: grid;
@@ -810,28 +856,53 @@ a {
       list-style: none;
       color: black;
       font-size: 1em;
-      margin: .25em; }
+      margin: 0.25em; }
     .TodayWalks__upcoming--list-publish-button {
-      color: #e6e6e6;
-      font-family: "arial", sans-serif;
+      color: #f7f7f7;
+      font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
-      border: solid 2px white;
-      border-radius: .5em;
+      border: solid 2px #e7f6fd;
+      border-radius: 0.5em;
       font-size: 1em;
-      padding: 0.2em 0.3em; }
+      padding: 0.2em; }
   .TodayWalks__alert {
     text-align: center;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 4em;
     color: #1190cb; }
+  .TodayWalks__modal {
+    width: 100%;
+    font-size: 2.5em; }
+    .TodayWalks__modal--button {
+      font-family: "Thasadith", sans-serif;
+      padding: 0.5em 1em;
+      font-size: 2.5em;
+      text-align: center;
+      color: #e7f6fd;
+      background-color: #1190cb;
+      border-radius: 0.5em;
+      border: solid 2px #e7f6fd;
+      cursor: pointer; }
+    .TodayWalks__modal--button:hover {
+      background-color: transparent;
+      color: #1190cb;
+      text-shadow: 2px 2px 8px #1190cb; }
+    .TodayWalks__modal--textarea {
+      color: #1a1a1a;
+      font-family: "Thasadith", sans-serif;
+      font-size: 2.5em;
+      background-color: #e7f6fd;
+      border: solid 2px #1190cb;
+      border-radius: 0.5em; }
+    .TodayWalks__modal--subtitle {
+      font-size: 2.5em; }
   .TodayWalks__past {
     grid-area: 1/6/2/16;
     border: solid 0.25em #1190cb;
     border-radius: 1em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .TodayWalks__past--title {
       color: #1190cb;
       font-size: 3em;
@@ -840,58 +911,57 @@ a {
       list-style: none;
       color: black;
       font-size: 1em;
-      margin: .25em; }
+      margin: 0.25em; }
     .TodayWalks__past--list-publish-button {
-      color: #e6e6e6;
-      font-family: "arial", sans-serif;
+      color: #f7f7f7;
+      font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
-      border: solid 2px white;
-      border-radius: .5em;
+      border: solid 2px #e7f6fd;
+      border-radius: 0.5em;
       font-size: 1em;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
-      padding-left: 0.3em;
-      padding-right: 0.3em; }
+      padding: 0.2em; }
     .TodayWalks__past--map {
       grid-area: 3/1/4/16;
       margin: 1em;
-      border-radius: .5em;
+      padding: 1em;
+      border-radius: 0.5em;
       font-size: 1em; }
     .TodayWalks__past--mapmap {
-      padding: 0.2em;
-      border-radius: .5em;
       font-size: 1em; }
     .TodayWalks__past--mapimage {
       background-color: #1a1a1a;
-      margin: 1em;
       padding: 0.2em;
-      border: solid 2px #1190cb;
-      border-radius: .5em;
+      border-radius: 0.5em;
       font-size: 1em; }
 
 .pagination-bottom {
-  background-color: white;
+  background-color: #e7f6fd;
   color: #1190cb; }
 
 .rt-thead.-header {
-  background-color: white;
+  background-color: #e7f6fd;
   color: #1190cb; }
+
+.ReactModalPortal {
+  color: #1a1a1a;
+  font-family: "Thasadith", sans-serif;
+  font-size: 1em;
+  border: 2px solid #1190cb;
+  background-image: radial-gradient(#f7f7f7, #808080); }
 
 .ownerWalks {
   font-size: 2em;
-  background-image: radial-gradient(white, white);
+  background-image: radial-gradient(#4d4d4d, #333333);
   display: grid;
   grid-template-columns: 15 1fr;
   grid-template-rows: auto; }
   .ownerWalks__reactTableUpcoming {
     grid-area: 1/1/2/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
     padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .ownerWalks__reactTableUpcoming--title {
       color: #1190cb;
       font-size: 2em;
@@ -901,13 +971,11 @@ a {
       width: 100%; }
   .ownerWalks__reactTablePast {
     grid-area: 2/1/3/16;
-    border: solid 0.25em #1190cb;
     border-radius: 1em;
     padding: 0.5em;
     margin: 1em;
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+    flex-wrap: wrap; }
     .ownerWalks__reactTablePast--title {
       color: #1190cb;
       font-size: 2em;
@@ -916,7 +984,7 @@ a {
     .ownerWalks__reactTablePast--table {
       width: 100%; }
   .ownerWalks__upcoming {
-    background-image: radial-gradient(white, white);
+    background-image: radial-gradient(#4d4d4d, #333333);
     grid-area: 1/1/2/6;
     border: solid 0.25em #1190cb;
     border-radius: 1em;
@@ -931,14 +999,14 @@ a {
       font-family: "Over the Rainbow", cursive; }
     .ownerWalks__upcoming--list-publish {
       list-style: none;
-      color: white;
+      color: #e7f6fd;
       font-size: 1em;
       margin: .25em; }
     .ownerWalks__upcoming--list-publish-button {
-      color: #e6e6e6;
-      font-family: "arial", sans-serif;
+      color: #f7f7f7;
+      font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       border-radius: .5em;
       font-size: 1em; }
   .ownerWalks__alert {
@@ -947,7 +1015,7 @@ a {
     font-size: 2em;
     color: #1190cb; }
   .ownerWalks__past {
-    background-image: radial-gradient(white, white);
+    background-image: radial-gradient(#4d4d4d, #333333);
     grid-area: 1/6/2/16;
     border: solid 0.25em #1190cb;
     border-radius: 1em;
@@ -961,40 +1029,33 @@ a {
       font-family: "Over the Rainbow", cursive; }
     .ownerWalks__past--list-publish {
       list-style: none;
-      color: white;
+      color: #e7f6fd;
       font-size: 1em;
       margin: .25em; }
     .ownerWalks__past--list-publish-button {
-      color: #e6e6e6;
-      font-family: "arial", sans-serif;
+      color: #f7f7f7;
+      font-family: "Thasadith", sans-serif;
       background-color: #1190cb;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       border-radius: .5em;
       font-size: 1em; }
     .ownerWalks__past--map {
       grid-area: 3/1/4/16;
       margin: 1em;
       padding: 1em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .ownerWalks__past--mapmap {
-      background-color: #1a1a1a;
-      margin: 1em;
       padding: 0.2em;
-      border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
     .ownerWalks__past--mapimage {
       background-color: #1a1a1a;
       margin: 1em;
       padding: 0.2em;
       border: solid 2px #1190cb;
       border-radius: .5em;
-      font-size: 1em;
-      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
+      font-size: 1em; }
 
 .rdtPicker {
   margin: 2em;
@@ -1022,11 +1083,11 @@ a {
   .rdtPicker__button {
     grid-area: 3/2;
     justify-self: right;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 3em;
     text-align: center;
     color: #1190cb;
-    background-color: white;
+    background-color: #333333;
     padding: .5em 1em;
     border-radius: .5em;
     border: solid 2px #1190cb;
@@ -1040,75 +1101,90 @@ a {
 .react-datetime-picker__wrapper {
   height: 4em;
   padding: 1em;
-  background-color: white;
+  background-color: #a6a6a6;
   border-radius: .5em; }
 
 .react-datetime-picker__inputGroup__divider {
   color: #1190cb;
   font-weight: bold; }
 
-button.css-1r4vtzz {
-  background-color: white;
-  font-family: "arial", sans-serif;
-  color: #1a1a1a;
-  font-size: 1.25em;
-  padding: .5em 1.5em;
-  border: solid 1px white;
-  border-radius: .25em; }
-
 button.css-48ayfv {
-  background-color: white;
-  font-family: "arial", sans-serif;
+  background-color: #a6a6a6;
+  font-family: "Thasadith", sans-serif;
   color: #1a1a1a;
   font-size: 1.25em;
   padding: .5em 1.5em;
   border-radius: .25em; }
 
 .walkerrdtPicker {
-  margin: 10em 10em 20em 10em;
+  margin: 5em 10em 45em 10em;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: 4 1fr;
   grid-gap: 1em; }
   .walkerrdtPicker__title {
     grid-area: 1/1;
-    text-align: center;
+    justify-self: left;
+    text-align: left;
     font-family: "Mouse Memoirs", sans-serif;
-    color: white;
-    font-size: 4em;
-    margin: .5em; }
+    color: #1190cb;
+    font-size: 4em; }
   .walkerrdtPicker__picker {
-    align-self: center;
-    margin-top: 1em;
     grid-area: 2/1;
-    font-size: 2em; }
+    font-size: 2.5em;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+    outline: none; }
   .walkerrdtPicker__select {
     grid-area: 3/1;
     margin: 1em 3em;
     font-size: 2em;
-    align-self: center; }
-  .walkerrdtPicker__button {
-    grid-area: 4/1;
     align-self: center;
-    font-family: "arial", sans-serif;
-    padding: .8em .5em;
-    font-size: 2.5em;
+    justify-self: center; }
+  .walkerrdtPicker__button {
+    grid-area: 1/1;
+    align-self: center;
+    justify-self: right;
+    font-family: "Thasadith", sans-serif;
+    padding: .5em 1em;
+    font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     cursor: pointer; }
   .walkerrdtPicker__button:hover {
     background-color: transparent;
     letter-spacing: 0.1em;
     color: #1190cb;
     text-shadow: 2px 2px 8px #1190cb; }
+  .walkerrdtPicker__closeButton {
+    grid-area: 4/1;
+    align-self: center;
+    justify-self: left;
+    font-family: "Thasadith", sans-serif;
+    padding: .5em 1em;
+    font-size: 2em;
+    text-align: center;
+    color: #e7f6fd;
+    background-color: #1190cb;
+    border-radius: .5em;
+    border: solid 2px #e7f6fd;
+    cursor: pointer; }
+  .walkerrdtPicker__closeButton:hover {
+    background-color: transparent;
+    letter-spacing: 0.1em;
+    color: #1190cb;
+    text-shadow: 2px 2px 8px #1190cb; }
 
 .react-datetime-picker__wrapper {
+  width: 100%;
   height: 4em;
   padding: 1em;
-  background-color: white;
+  background-color: #dcdcdc;
+  border: solid 2px #1190cb;
   border-radius: .5em;
   align-self: center; }
 
@@ -1117,17 +1193,18 @@ button.css-48ayfv {
   font-weight: bold; }
 
 button.css-1r4vtzz {
-  background-color: white;
-  font-family: "arial", sans-serif;
+  align-self: left;
+  background-color: #f7f7f7;
+  font-family: "Thasadith", sans-serif;
   color: #1a1a1a;
   font-size: 1.25em;
   padding: .5em 1.5em;
-  border: solid 1px white;
+  border: solid 1px #4d4d4d;
   border-radius: .25em; }
 
 button.css-48ayfv {
-  background-color: white;
-  font-family: "arial", sans-serif;
+  background-color: #a6a6a6;
+  font-family: "Thasadith", sans-serif;
   color: #1a1a1a;
   font-size: 1.25em;
   padding: .5em 1.5em;
@@ -1138,10 +1215,9 @@ button.css-48ayfv {
 
 .walkerInvite {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 1fr auto auto;
-  justify-content: center;
-  margin: 2em; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  justify-content: center; }
   .walkerInvite__title {
     grid-area: 1/1/2/4;
     font-family: "Mouse Memoirs", sans-serif;
@@ -1149,7 +1225,7 @@ button.css-48ayfv {
     color: #1190cb;
     text-align: center; }
   .walkerInvite__form {
-    grid-area: 2/2;
+    grid-area: 2/1/3/4;
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
@@ -1161,14 +1237,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerInvite__form--nameInput {
       grid-area: 1/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerInvite__form--phoneLabel {
@@ -1177,27 +1253,27 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerInvite__form--phoneInput {
       grid-area: 2/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerInvite__form--button {
       grid-area: 3/2;
       justify-self: center;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 2em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .walkerInvite__form--button:hover {
       background-color: transparent;
@@ -1214,14 +1290,14 @@ button.css-48ayfv {
   .inviteDash__nav--buttonEmail {
     grid-area: 1/2;
     justify-self: center;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     padding: .8em .5em;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     cursor: pointer; }
   .inviteDash__nav--buttonEmail:hover {
     background-color: transparent;
@@ -1231,14 +1307,14 @@ button.css-48ayfv {
   .inviteDash__nav--buttonText {
     grid-area: 1/3;
     justify-self: center;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     padding: .8em .5em;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     cursor: pointer; }
   .inviteDash__nav--buttonText:hover {
     background-color: transparent;
@@ -1250,32 +1326,60 @@ button.css-48ayfv {
   width: 100%;
   margin: 2em; }
 
-.RRT__tab.tab {
-  width: 15%;
-  color: #1a1a1a;
-  font-size: 2.5em;
-  border-top: 2px solid #1190cb;
-  border-right: 2px solid #1190cb;
-  border-left: 2px solid #1190cb;
-  background-color: white;
-  border-radius: 1em 1em 0em 0em; }
-
-.RRT__tab.tab.RRT__tab--selected {
-  background-color: #e6e6e6;
-  color: #1190cb; }
-
-.RRT__container {
-  padding: 2em;
-  width: 98%; }
-  @media only screen and (max-width: 37.5em) {
-    .RRT__container {
-      width: 800px; } }
-
-.RRT__panel.panel {
+.invitePage {
   width: 100%;
-  background-color: #e6e6e6;
-  border: 2px solid #1190cb;
-  border-radius: 0em 1em 1em 1em; }
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto; }
+  .invitePage__form {
+    grid-area: 2/1/3/7;
+    border: 2px solid #1190cb;
+    border-radius: 0em 1em 1em 1em;
+    padding: 2em;
+    background-color: #f7f7f7; }
+  .invitePage__tabs--email {
+    font-size: 3em;
+    color: #e7f6fd;
+    grid-area: 1/1;
+    text-align: center;
+    padding: .25em;
+    border-top: 2px solid #1190cb;
+    border-right: 2px solid #1190cb;
+    border-left: 2px solid #1190cb;
+    border-radius: 1em 1em 0em 0em;
+    background-color: #a6a6a6; }
+  .invitePage__tabs--email:active {
+    background-color: #f7f7f7;
+    color: #1190cb; }
+  .invitePage__tabs--text {
+    font-size: 3em;
+    color: #e7f6fd;
+    grid-area: 1/2;
+    text-align: center;
+    padding: .25em;
+    border-top: 2px solid #1190cb;
+    border-right: 2px solid #1190cb;
+    border-left: 2px solid #1190cb;
+    border-radius: 1em 1em 0em 0em;
+    background-color: #a6a6a6; }
+  .invitePage__tabs--text:active {
+    background-color: #f7f7f7;
+    color: #1190cb; }
+  .invitePage__tabs--list {
+    font-size: 3em;
+    color: #e7f6fd;
+    grid-area: 1/3;
+    text-align: center;
+    padding: .25em;
+    border-top: 2px solid #1190cb;
+    border-right: 2px solid #1190cb;
+    border-left: 2px solid #1190cb;
+    border-radius: 1em 1em 0em 0em;
+    background-color: #a6a6a6; }
+  .invitePage__tabs--list:active {
+    background-color: #f7f7f7;
+    color: #1190cb; }
 
 .showMap {
   margin: 3em; }
@@ -1286,28 +1390,28 @@ button.css-48ayfv {
     color: #1190cb;
     text-align: center; }
   .showMap__button--checkIn {
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     padding: .5em 1em;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     margin: 1em 1em; }
   .showMap__button--checkIn:hover {
     background-color: transparent;
     letter-spacing: 0.1em;
     text-shadow: 2px 2px 8px #1190cb; }
   .showMap__button--checkOut {
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     padding: .5em 1em;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     margin: 1em 1em; }
   .showMap__button--checkOut:hover {
     background-color: transparent;
@@ -1315,15 +1419,15 @@ button.css-48ayfv {
     text-shadow: 2px 2px 8px #1190cb; }
 
 .walkernav {
-  background-image: linear-gradient(white, brown);
-  box-shadow: 0em 0em 0.5em 0.5em white;
+  background-image: linear-gradient(#4d4d4d, #7ECEFF);
+  box-shadow: 0em 0em 0.5em 0.5em #333333;
   display: grid;
   grid-template-columns: 6 1fr;
   grid-template-areas: "l . . . s c"; }
   .walkernav__logo {
     justify-self: center;
     grid-area: l;
-    background-image: radial-gradient(#e6e6e6, white);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: .5em;
     padding: 0em 3em; }
@@ -1332,13 +1436,13 @@ button.css-48ayfv {
   .walkernav__splash {
     justify-self: right;
     grid-area: s;
-    background-image: radial-gradient(#e6e6e6, white);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: .5em 0em 0em .5em;
     padding: 0em 5em; }
     .walkernav__splash--link {
       font-size: 2.5em;
-      color: white; }
+      color: #a6a6a6; }
     .walkernav__splash--link:hover {
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb; }
@@ -1347,17 +1451,17 @@ button.css-48ayfv {
       margin-top: .5em; }
   .walkernav__splash:hover {
     background-color: transparent;
-    border-color: white; }
+    border-color: #e7f6fd; }
   .walkernav__contact {
     justify-self: left;
     grid-area: c;
-    background-image: radial-gradient(#e6e6e6, white);
+    background-image: radial-gradient(#f7f7f7, #808080);
     border: solid 0.25em #1190cb;
     border-radius: 0em .5em .5em 0em;
     padding: 0em 5em; }
     .walkernav__contact--link {
       font-size: 2.5em;
-      color: white; }
+      color: #a6a6a6; }
     .walkernav__contact--link:hover {
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb; }
@@ -1366,10 +1470,10 @@ button.css-48ayfv {
       height: 2em; }
   .walkernav__contact:hover {
     background-color: transparent;
-    border-color: white; }
+    border-color: #e7f6fd; }
 
 .walkerContact {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #dcdcdc);
   height: 100%;
   display: grid;
   height: 90%;
@@ -1397,14 +1501,14 @@ button.css-48ayfv {
       grid-template-rows-margin-right: 1em; }
     .walkerContact__firstName--input {
       grid-area: 1/2/1/3;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
   .walkerContact__lastName {
@@ -1417,14 +1521,14 @@ button.css-48ayfv {
       grid-template-rows-margin-right: 1em; }
     .walkerContact__lastName--input {
       grid-area: 1/2/1/3;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
   .walkerContact__userType {
@@ -1437,14 +1541,14 @@ button.css-48ayfv {
       grid-template-rows-margin-right: 1em; }
     .walkerContact__userType--input {
       grid-area: 1/2/2/11;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
   .walkerContact__textArea {
@@ -1457,14 +1561,14 @@ button.css-48ayfv {
       grid-template-rows-justify-self: center; }
     .walkerContact__textArea--input {
       grid-area: 1/2/2/11;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 1em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
   .walkerContact__link--button {
@@ -1472,13 +1576,13 @@ button.css-48ayfv {
     justify-self: right;
     font-size: 3em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: #1190cb;
     padding: .5em 1em;
     border-radius: .5em;
-    border: solid 2px white;
+    border: solid 2px #e7f6fd;
     margin: 1em 0em;
-    box-shadow: 0 0 12px white;
+    box-shadow: 0 0 12px #a6a6a6;
     outline: none;
     text-decoration: none; }
   .walkerContact__link--button:hover {
@@ -1486,7 +1590,7 @@ button.css-48ayfv {
     letter-spacing: 0.1em;
     color: #1190cb;
     text-shadow: 2px 2px 8px #1190cb;
-    box-shadow: 0 0 12px brown;
+    box-shadow: 0 0 12px #7ECEFF;
     outline: none;
     text-decoration: none; }
 
@@ -1520,19 +1624,18 @@ button.css-48ayfv {
     .topBarOwner__brand--logo {
       height: 4em;
       font-size: 1em;
-      border: solid 0.25em #1190cb;
       border-radius: 1em;
       padding: 1.5em; }
     .topBarOwner__brand--logotooltip {
       visibility: hidden;
       background-color: #1190cb;
-      color: #e6e6e6;
+      color: #f7f7f7;
       text-align: center;
       font-size: 1em;
       position: absolute;
       z-index: 1; }
     .topBarOwner__brand--logo:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
   .topBarOwner__nav {
     grid-area: 1/3;
     font-size: 2.5em;
@@ -1544,7 +1647,7 @@ button.css-48ayfv {
       font-style: bold;
       color: black; }
     .topBarOwner__nav--itemLink:hover {
-      color: white; }
+      color: #4d4d4d; }
     .topBarOwner__nav--itemDashboard {
       grid-area: 1/3;
       padding: .5em 1.5em;
@@ -1552,11 +1655,11 @@ button.css-48ayfv {
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: .25em .25em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #808080;
       outline: none;
       text-decoration: none; }
     .topBarOwner__nav--itemDashboard:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
     .topBarOwner__nav--profile {
       height: 1.5em;
       outline: none;
@@ -1568,11 +1671,11 @@ button.css-48ayfv {
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: .25em .25em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #808080;
       outline: none;
       text-decoration: none; }
     .topBarOwner__nav--itemWalks:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
     .topBarOwner__nav--walks {
       height: 1.5em; }
     .topBarOwner__nav--itemMyDogs {
@@ -1582,11 +1685,11 @@ button.css-48ayfv {
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: .25em .25em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #808080;
       outline: none;
       text-decoration: none; }
     .topBarOwner__nav--itemMyDogs:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
     .topBarOwner__nav--dogs {
       height: 1.5em; }
     .topBarOwner__nav--itemGallery {
@@ -1596,11 +1699,11 @@ button.css-48ayfv {
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: .25em .25em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #808080;
       outline: none;
       text-decoration: none; }
     .topBarOwner__nav--itemGallery:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
     .topBarOwner__nav--images {
       height: 1.5em; }
     .topBarOwner__nav--itemLogout {
@@ -1610,20 +1713,22 @@ button.css-48ayfv {
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: .25em .25em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #808080;
       outline: none;
       text-decoration: none; }
     .topBarOwner__nav--itemLogout:hover {
-      background-color: white; }
+      background-color: #4d4d4d; }
     .topBarOwner__nav--logout {
       height: 1.5em; }
 
 .topBarWalker {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #dcdcdc);
+  border: solid 0.25em #1190cb;
   border-radius: 1em;
   display: grid;
   grid-template-columns: auto auto 1fr;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
   .topBarWalker__title {
     grid-area: 1/2;
     font-family: "Mouse Memoirs", sans-serif;
@@ -1641,13 +1746,13 @@ button.css-48ayfv {
     .topBarWalker__brand--logotooltip {
       visibility: hidden;
       background-color: #1190cb;
-      color: #e6e6e6;
+      color: #f7f7f7;
       text-align: center;
       font-size: 1em;
       position: absolute;
       z-index: 1; }
     .topBarWalker__brand--logo:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
   .topBarWalker__nav {
     grid-area: 1/3;
     font-size: 2.5em;
@@ -1665,11 +1770,13 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemDashboard:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--profile {
       height: 1.5em;
       outline: none;
@@ -1679,11 +1786,13 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemWalks:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--walks {
       height: 1.5em; }
     .topBarWalker__nav--itemSchedWalks {
@@ -1691,11 +1800,13 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemSchedWalks:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--schedule {
       height: 1.5em; }
     .topBarWalker__nav--itemInvite {
@@ -1703,11 +1814,13 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemInvite:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--invite {
       height: 1.5em; }
     .topBarWalker__nav--itemGallery {
@@ -1715,11 +1828,13 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemGallery:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--images {
       height: 1.5em; }
     .topBarWalker__nav--itemLogout {
@@ -1727,15 +1842,18 @@ button.css-48ayfv {
       padding: .5em 1.5em;
       background-color: transparent;
       border-radius: .5em;
+      border: solid 2px #1190cb;
       margin: .25em .25em;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .topBarWalker__nav--itemLogout:hover {
-      background-color: #e6e6e6; }
+      background-color: #f7f7f7; }
     .topBarWalker__nav--logout {
       height: 1.5em; }
 
 .CustomerList {
+  width: 100%;
   color: #1a1a1a;
   font-size: 2em; }
   .CustomerList__table {
@@ -1745,11 +1863,54 @@ button.css-48ayfv {
       color: #1190cb;
       font-size: 3em; }
 
-.main-content-profile {
-  height: 100%;
+.main-content-userEdition {
   display: grid;
-  grid-template-columns: 1fr auto 1fr 1fr;
-  grid-template-rows: auto 1fr  auto;
+  grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+  grid-template-rows: 1fr auto  auto;
+  margin: 2em; }
+
+.main-content-userEdition__title {
+  grid-area: 1/2/2/4;
+  font-family: "Mouse Memoirs", sans-serif;
+  padding: 1em;
+  color: #1190cb;
+  font-size: 7em;
+  justify-self: center;
+  align-self: center; }
+
+.main-content-userEdition__cancel {
+  grid-area: 1/3;
+  justify-self: right;
+  align-self: center; }
+  .main-content-userEdition__cancel--button {
+    padding: 1em 3em;
+    border-radius: 1em;
+    border: solid 2px #1190cb;
+    margin: 1em 0em;
+    outline: none;
+    text-decoration: none; }
+  .main-content-userEdition__cancel--button:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 0 12px #7ECEFF;
+    outline: none;
+    text-decoration: none; }
+  .main-content-userEdition__cancel--cancelEditIcon {
+    height: 5em; }
+
+.main-content-userEditionprofile__form {
+  color: #1a1a1a;
+  grid-area: 2/2/3/4;
+  display: flex; }
+
+.main-content-userEditionCert__form {
+  color: #1a1a1a;
+  grid-area: 3/2/4/4;
+  display: flex; }
+
+.main-content-profile {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 1fr auto  auto;
   margin: 2em; }
 
 .main-content-profile__title {
@@ -1764,7 +1925,7 @@ button.css-48ayfv {
   grid-area: 1/2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr auto 1fr 1fr auto;
   grid-gap: 1em; }
 
 .main-content-profile__form--firstNameLabel {
@@ -1781,7 +1942,6 @@ button.css-48ayfv {
   border: solid 2px #a6a6a6;
   border-radius: .5em;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1793,14 +1953,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--lastNameInput {
   grid-area: 2/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1812,14 +1971,14 @@ button.css-48ayfv {
 
 .main-content-profile_form--aboutInput {
   grid-area: 3/2;
+  box-sizing: border-box;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1831,14 +1990,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--addressInput {
   grid-area: 4/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1850,14 +2008,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--cityInput {
   grid-area: 5/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1869,14 +2026,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--stateInput {
   grid-area: 6/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1888,14 +2044,13 @@ button.css-48ayfv {
 
 .main-content-profile__form--zipInput {
   grid-area: 7/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
@@ -1907,21 +2062,20 @@ button.css-48ayfv {
 
 .main-content-profile__form--countryInput {
   grid-area: 8/2;
+  align-self: flex-start;
   font-family: "Thasadith", sans-serif;
   font-size: 3em;
   padding: .5em;
   border: solid 2px #a6a6a6;
   border-radius: .5em;
-  align-self: flex-start;
   background-color: #e7f6fd;
-  color: #333333;
   box-shadow: inset 0 0 12px #7ECEFF;
   outline: none;
   text-decoration: none; }
 
 .main-content-profile__form--button {
   grid-area: 9/2;
-  justify-self: center;
+  justify-self: right;
   font-family: "Thasadith", sans-serif;
   padding: .8em .5em;
   font-size: 2em;
@@ -1938,45 +2092,100 @@ button.css-48ayfv {
   color: #1190cb;
   text-shadow: 2px 2px 8px #1190cb; }
 
-.main-content-certArea__form {
-  color: #1a1a1a;
-  grid-area: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
+.walkerpublic__nav {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  height: 10em;
+  background: #1a1a1a;
+  z-index: 2; }
+  .walkerpublic__nav--home {
+    float: left;
+    background-color: #e7f6fd;
+    padding: 1em 2em;
+    margin: 1em 4em;
+    border: 2px solid #e7f6fd;
+    border-radius: 1em;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--homeIcon {
+    height: 4em; }
+  .walkerpublic__nav--contact {
+    float: left;
+    background-color: #e7f6fd;
+    padding: 1em 2em;
+    margin: 1em 4em;
+    border: 2px solid #e7f6fd;
+    border-radius: 1em;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--contactIcon {
+    height: 4em; }
+  .walkerpublic__nav--userregistration {
+    float: right;
+    font-family: "Thasadith", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #e7f6fd;
+    background-color: transparent;
+    padding: .5em 1em;
+    margin: .5em 1em;
+    border-left: 2px solid #e7f6fd;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--userregistration:hover {
+    background-color: transparent;
+    color: #7ECEFF;
+    text-shadow: 2px 2px 8px #e7f6fd;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--walkerauthentification {
+    float: right;
+    font-family: "Thasadith", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #e7f6fd;
+    background-color: transparent;
+    padding: .5em 1em;
+    border-left: solid 2px #e7f6fd;
+    margin: .5em 1em;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--walkerauthentification:hover {
+    background-color: transparent;
+    color: #7ECEFF;
+    text-shadow: 2px 2px 8px #e7f6fd;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--walkerregistration {
+    float: right;
+    font-family: "Thasadith", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #e7f6fd;
+    background-color: transparent;
+    padding: .5em 1em;
+    margin: .5em 1em;
+    outline: none;
+    text-decoration: none; }
+  .walkerpublic__nav--walkerregistration:hover {
+    background-color: transparent;
+    color: #7ECEFF;
+    text-shadow: 2px 2px 8px #e7f6fd;
+    outline: none;
+    text-decoration: none; }
 
-.main-content-userEdition {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr  auto;
-  margin: 2em; }
+.walkerpublic__public {
+  padding-bottom: 10em;
+  background-image: radial-gradient(#f7f7f7, #dcdcdc);
+  border: solid 0.25em #1190cb; }
 
-.main-content-userEdition__title {
-  font-family: "Mouse Memoirs", sans-serif;
-  padding: 1em;
-  color: #1190cb;
-  font-size: 5em; }
-
-.main-content-userEditionprofile__form {
-  color: #1a1a1a;
-  grid-area: 1/2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
-
-.main-content-userEditionCert__form {
-  color: #1a1a1a;
-  grid-area: 1/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1em; }
+.walkerpublic__publicFooter {
+  background-image: radial-gradient(#f7f7f7, #dcdcdc);
+  border: solid 0.25em #1190cb; }
 
 .aboutTailMe {
-  background-image: radial-gradient(white, white); }
+  background-image: radial-gradient(#4d4d4d, #333333); }
   .aboutTailMe__grid {
     height: 100%;
     display: grid;
@@ -1994,7 +2203,7 @@ button.css-48ayfv {
     .aboutTailMe__grid--text {
       grid-area: 2 / 2 / 3 /3;
       font-size: 2.5em;
-      color: white;
+      color: #a6a6a6;
       padding: .5em;
       line-height: 2;
       margin-bottom: 2em; }
@@ -2029,15 +2238,15 @@ button.css-48ayfv {
   .splash__about--text {
     grid-area: t;
     font-size: 2.5em;
-    color: white;
+    color: #a6a6a6;
     margin: 1em;
     text-align: center; }
   .splash__about--link {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
-    background-color: white;
+    color: #f7f7f7;
+    background-color: #333333;
     padding: 1em 1em;
     border-radius: .5em;
     border: solid 2px #1a1a1a;
@@ -2057,15 +2266,15 @@ button.css-48ayfv {
   .splash__user--text {
     grid-area: t;
     font-size: 2.5em;
-    color: white;
+    color: #a6a6a6;
     margin: 1em;
     text-align: center; }
   .splash__user--authentification {
     grid-area: c;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
-    background-color: white;
+    color: #f7f7f7;
+    background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
     border: solid 2px #1a1a1a;
@@ -2079,8 +2288,8 @@ button.css-48ayfv {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
-    background-color: white;
+    color: #f7f7f7;
+    background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
     border: solid 2px #1a1a1a;
@@ -2100,15 +2309,15 @@ button.css-48ayfv {
   .splash__walker--text {
     grid-area: t;
     font-size: 2.5em;
-    color: white;
+    color: #a6a6a6;
     margin: 1em;
     text-align: center; }
   .splash__walker--authentification {
     grid-area: c;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
-    background-color: white;
+    color: #f7f7f7;
+    background-color: #333333;
     padding: 1em 2em;
     border-radius: .5em;
     border: solid 2px #1a1a1a;
@@ -2122,8 +2331,8 @@ button.css-48ayfv {
     grid-area: b;
     font-size: 2em;
     text-align: center;
-    color: #e6e6e6;
-    background-color: white;
+    color: #f7f7f7;
+    background-color: #333333;
     border-radius: .5em;
     padding: 1em 2em;
     border: solid 2px #1a1a1a;
@@ -2140,7 +2349,7 @@ button.css-48ayfv {
   justify-content: center; }
 
 .ownerSignup {
-  background-image: radial-gradient(white, white);
+  background-image: radial-gradient(#4d4d4d, #333333);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2155,7 +2364,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5em; }
   .ownerSignup__form {
-    color: white;
+    color: #a6a6a6;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -2167,14 +2376,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerSignup__form--emailInput {
       grid-area: 2/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6; }
     .ownerSignup__form--usernameLabel {
       grid-area: 3/1;
       justify-self: left;
@@ -2182,14 +2391,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerSignup__form--usernameInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6; }
     .ownerSignup__form--passwordLabel {
       grid-area: 5/1;
       justify-self: left;
@@ -2197,22 +2406,22 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerSignup__form--passwordInput {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6; }
     .ownerSignup__form--submitButton {
       grid-area: 7/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2228,7 +2437,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2241,7 +2450,7 @@ button.css-48ayfv {
       grid-area: 3/2; }
 
 .walkerSignup {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2256,7 +2465,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5.5em; }
   .walkerSignup__form {
-    color: white;
+    color: #333333;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -2268,15 +2477,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerSignup__form--emailInput {
       grid-area: 2/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerSignup__form--usernameLabel {
       grid-area: 3/1;
@@ -2285,15 +2494,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerSignup__form--usernameInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerSignup__form--passwordLabel {
       grid-area: 5/1;
@@ -2302,29 +2511,29 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerSignup__form--passwordInput {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerSignup__form--submitButton {
       grid-area: 7/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerSignup__form--submitButton:hover {
@@ -2349,16 +2558,16 @@ button.css-48ayfv {
     .walkerSignup__form--alertButton {
       grid-area: 9/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: red;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerSignup__form--alertButton:hover {
@@ -2378,12 +2587,12 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: 1em 1em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerSignup__form--homeButton:hover {
@@ -2396,7 +2605,7 @@ button.css-48ayfv {
       height: 2em; }
 
 .login {
-  background-image: radial-gradient(white, white);
+  background-image: radial-gradient(#4d4d4d, #333333);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2412,7 +2621,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5em; }
   .login__form {
-    color: white;
+    color: #a6a6a6;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -2424,14 +2633,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .login__form--usernameInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6; }
     .login__form--passwordLabel {
       grid-area: 5/1;
       justify-self: left;
@@ -2439,22 +2648,22 @@ button.css-48ayfv {
       font-size: 3em; }
     .login__form--passwordInput {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6; }
     .login__form--submitButton {
       grid-area: 7/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2474,7 +2683,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2485,11 +2694,11 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .ownerProfile {
-  background-image: radial-gradient(#4d4d4d, #333333);
+  background-image: radial-gradient(#333333, #0d0d0d);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: auto 1fr  auto; }
+  grid-template-rows: auto 1fr  auto auto; }
   .ownerProfile__logo {
     grid-area: 1/2/1/4;
     margin: 2em; }
@@ -2500,7 +2709,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5em; }
   .ownerProfile__form {
-    color: white;
+    color: #a6a6a6;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -2512,14 +2721,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--firstNameInput {
       grid-area: 2/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--lastNameLabel {
       grid-area: 3/1;
       justify-self: left;
@@ -2527,14 +2738,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--lastNameInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--userTypeLabel {
       grid-area: 5/1;
       justify-self: left;
@@ -2542,14 +2755,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--userTypeSelect {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--textAreaLabel {
       grid-area: 7/1;
       justify-self: left;
@@ -2557,14 +2772,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--textArea {
       grid-area: 8/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--addressLabel {
       grid-area: 9/1;
       justify-self: left;
@@ -2572,14 +2789,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--addressInput {
       grid-area: 10/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--cityLabel {
       grid-area: 11/1;
       justify-self: left;
@@ -2587,14 +2806,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--cityInput {
       grid-area: 12/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--stateLabel {
       grid-area: 13/1;
       justify-self: left;
@@ -2602,14 +2823,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--stateInput {
       grid-area: 14/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--zipcodeLabel {
       grid-area: 15/1;
       justify-self: left;
@@ -2617,14 +2840,16 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--zipcodeInput {
       grid-area: 16/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--countryLabel {
       grid-area: 17/1;
       justify-self: left;
@@ -2632,22 +2857,24 @@ button.css-48ayfv {
       font-size: 3em; }
     .ownerProfile__form--countryInput {
       grid-area: 18/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
       border: solid 2px #1a1a1a;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white; }
+      background-color: #333333;
+      color: #a6a6a6;
+      outline: none;
+      text-decoration: none; }
     .ownerProfile__form--submitButton {
       grid-area: 19/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2663,7 +2890,7 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: white;
+      background-color: #333333;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
@@ -2672,9 +2899,15 @@ button.css-48ayfv {
       background-color: #1a1a1a;
       letter-spacing: 0.1em;
       text-shadow: 2px 2px 8px #1190cb; }
+    .ownerProfile__form--homeIcon {
+      height: 4em; }
+  .ownerProfile__footer {
+    grid-area: 4/1/5/4;
+    display: flex;
+    justify-content: center; }
 
 .walkerProfile {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2689,7 +2922,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5em; }
   .walkerProfile__form {
-    color: white;
+    color: #333333;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -2702,14 +2935,14 @@ button.css-48ayfv {
     .walkerProfile__form--firstNameInput {
       grid-area: 2/1;
       align-self: flex-start;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--lastNameLabel {
@@ -2719,15 +2952,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--lastNameInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--userTypeLabel {
@@ -2737,15 +2970,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--userTypeSelect {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--textAreaLabel {
@@ -2755,15 +2988,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--textArea {
       grid-area: 8/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--addressLabel {
@@ -2773,15 +3006,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--addressInput {
       grid-area: 10/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--cityLabel {
@@ -2791,15 +3024,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--cityInput {
       grid-area: 12/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--stateLabel {
@@ -2809,15 +3042,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--stateInput {
       grid-area: 14/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--zipcodeLabel {
@@ -2827,15 +3060,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--zipcodeInput {
       grid-area: 16/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--countryLabel {
@@ -2845,30 +3078,30 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerProfile__form--countryInput {
       grid-area: 18/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--submitButton {
       grid-area: 19/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--submitButton:hover {
@@ -2876,7 +3109,7 @@ button.css-48ayfv {
       letter-spacing: 0.1em;
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb;
-      box-shadow: 0 0 12px brown;
+      box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--homeButton {
@@ -2884,13 +3117,13 @@ button.css-48ayfv {
       justify-self: right;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 1em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--homeButton:hover {
@@ -2898,7 +3131,7 @@ button.css-48ayfv {
       letter-spacing: 0.1em;
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb;
-      box-shadow: 0 0 12px brown;
+      box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerProfile__form--footer {
@@ -2944,21 +3177,24 @@ button.css-48ayfv {
     grid-gap: 2em; }
     .walkerDash__grid--header {
       grid-area: 1/1/2/16;
-      background-image: radial-gradient(#e6e6e6, white);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
-      border-radius: 1em; }
+      border-radius: 1em;
+      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
     .walkerDash__grid--main-content {
       display: flex;
       padding: .4em;
-      background-image: radial-gradient(#e6e6e6, white);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
       border-radius: 1em;
-      grid-area: 2/1/3/16; }
+      grid-area: 2/1/3/16;
+      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
     .walkerDash__grid--footer {
       grid-area: 3/1/4/16;
-      background-image: radial-gradient(#e6e6e6, white);
+      background-image: radial-gradient(#f7f7f7, #dcdcdc);
       border: solid 0.25em #1190cb;
-      border-radius: 1em; }
+      border-radius: 1em;
+      box-shadow: 0em 0em 0.5em 0.5em #1a1a1a; }
 
 .main-content {
   background-color: transparent;
@@ -2974,98 +3210,99 @@ button.css-48ayfv {
     grid-template-columns: .5fr .5fr 1fr 1fr  .5fr .5fr;
     grid-template-rows: 1fr auto auto auto auto auto 1fr;
     grid-gap: .5em;
-    color: white; }
+    color: #a6a6a6; }
     .main-content__body--firstNameLabel {
       grid-area: 1/2;
       justify-self: right; }
     .main-content__body--firstNameInput {
       grid-area: 1/3;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--lastNameLabel {
       grid-area: 1/4;
       justify-self: right; }
     .main-content__body--lastNameInput {
       grid-area: 1/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--userTypeLabel {
       grid-area: 2/3;
       justify-self: right; }
     .main-content__body--userTypeInput {
       grid-area: 2/4;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--aboutMeLabel {
       grid-area: 3/2;
       justify-self: right; }
     .main-content__body--aboutMeInput {
       grid-area: 3/3/4/6;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--addressLabel {
       grid-area: 4/2;
       justify-self: right; }
     .main-content__body--addressInput {
       grid-area: 4/3/5/6;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--cityLabel {
       grid-area: 5/2;
       justify-self: right; }
     .main-content__body--cityInput {
       grid-area: 5/3;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--stateLabel {
       grid-area: 5/4;
       justify-self: right; }
     .main-content__body--stateInput {
       grid-area: 5/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--countryLabel {
       grid-area: 7/4;
       justify-self: right; }
     .main-content__body--countryInput {
       grid-area: 7/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
     .main-content__body--zipcodeLabel {
       grid-area: 6/4;
       justify-self: right; }
     .main-content__body--zipcodeInput {
       grid-area: 6/5;
       justify-self: left;
-      color: #e6e6e6; }
+      color: #f7f7f7; }
 
 .walker-main-content {
   background-color: transparent;
   margin: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr auto; }
+  grid-template-rows: 1fr 1fr auto auto; }
   .walker-main-content__title {
-    grid-area: 1/2;
-    font-family: "Mouse Memoirs", sans-serif;
-    color: #1190cb;
-    font-size: 5em;
-    text-align: center; }
-  .walker-main-content__subtitle {
-    grid-area: 2/2;
-    font-family: "Over the Rainbow", cursive;
+    grid-area: 3/2;
+    font-family: "Thasadith", sans-serif;
     color: #1a1a1a;
     font-size: 5em;
+    justify-self: center;
+    align-self: center; }
+  .walker-main-content__subtitle {
+    grid-area: 2/2;
+    font-family: "Mouse Memoirs", sans-serif;
+    color: #1190cb;
+    font-size: 6em;
     text-align: center; }
   .walker-main-content__availibility {
     grid-area: 1/3/3/4;
     text-align: center;
     font-family: "Mouse Memoirs", sans-serif;
-    font-size: 2em;
-    color: white;
-    background-color: brown;
-    border: 0.05em solid white;
-    box-shadow: 0em 0em 0.5em 0.25em #e6e6e6;
+    font-size: 4em;
+    color: #e7f6fd;
+    background-color: #7ECEFF;
+    border: 0.05em solid #e7f6fd;
+    box-shadow: 0 0 12px #a6a6a6;
     border-radius: 3em;
     padding: 1.5em 0.8em;
     justify-self: center;
@@ -3075,61 +3312,52 @@ button.css-48ayfv {
     justify-self: center;
     align-self: center; }
     .walker-main-content__profilePhoto--image {
-      height: 17em; }
+      border: solid 2px #e7f6fd;
+      border-radius: 1em;
+      box-shadow: 0 0 12px #a6a6a6;
+      height: 20em; }
   .walker-main-content__editInfo {
-    grid-area: 3/1; }
+    grid-area: 3/3;
+    justify-self: center; }
     .walker-main-content__editInfo--button {
-      justify-self: center;
-      font-family: "arial", sans-serif;
-      font-size: 3em;
-      text-align: center;
-      color: white;
-      background-color: #1190cb;
-      padding: .5em 1em;
-      border-radius: .5em;
-      border: solid 2px white;
+      padding: 1em 3em;
+      border-radius: 1em;
+      border: solid 2px #1190cb;
       margin: 1em 0em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walker-main-content__editInfo--button:hover {
-      background-color: transparent;
-      letter-spacing: 0.1em;
-      color: #1190cb;
-      text-shadow: 2px 2px 8px #1190cb;
-      box-shadow: 0 0 12px brown;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
+    .walker-main-content__editInfo--profileEditIcon {
+      height: 5em; }
   .walker-main-content__photoUpload {
-    grid-area: 3/3; }
+    grid-area: 3/1;
+    justify-self: center; }
     .walker-main-content__photoUpload--button {
-      justify-self: center;
-      font-family: "arial", sans-serif;
-      font-size: 3em;
-      text-align: center;
-      color: white;
-      background-color: #1190cb;
-      padding: .5em 1em;
-      border-radius: .5em;
-      border: solid 2px white;
+      padding: 1em 3em;
+      border-radius: 1em;
+      border: solid 2px #1190cb;
       margin: 1em 0em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walker-main-content__photoUpload--button:hover {
-      background-color: transparent;
-      letter-spacing: 0.1em;
-      color: #1190cb;
-      text-shadow: 2px 2px 8px #1190cb;
-      box-shadow: 0 0 12px brown;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
+    .walker-main-content__photoUpload--addPhotoIcon {
+      height: 5em; }
   .walker-main-content__body {
     grid-area: 4/1/5/4;
     display: grid;
-    font-size: 2.5em;
+    font-size: 3em;
     grid-template-columns: 0.5fr auto 1fr 1fr auto 0.5fr;
-    grid-template-rows: 1fr auto auto auto auto auto 1fr;
+    grid-template-rows: 1fr auto auto auto auto auto auto;
     grid-gap: 0.5em;
     color: #1190cb; }
     .walker-main-content__body--aboutMeLabel {
@@ -3139,61 +3367,65 @@ button.css-48ayfv {
       grid-area: 1/3/2/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--certificationLabel {
+    .walker-main-content__body--servicesLabel {
       grid-area: 2/2;
       justify-self: right;
       color: #1190cb; }
-    .walker-main-content__body--certificationInput {
-      grid-area: 2/3/6/5;
+    .walker-main-content__body--servicesInput {
+      grid-area: 2/3/3/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--bondLabel {
+    .walker-main-content__body--qualificationsLabel {
       grid-area: 3/2;
       justify-self: right;
       color: #1190cb; }
-    .walker-main-content__body--bondInput {
-      grid-area: 3/3/6/5;
+    .walker-main-content__body--certificationInput {
+      grid-area: 3/3/4/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--insuranceLabel {
-      grid-area: 4/2;
-      justify-self: right;
-      color: #1190cb; }
     .walker-main-content__body--insuranceInput {
-      grid-area: 4/3/6/5;
+      grid-area: 4/3/5/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--servicesLabel {
+    .walker-main-content__body--bondLabel {
       grid-area: 5/2;
       justify-self: right;
       color: #1190cb; }
-    .walker-main-content__body--servicesInput {
+    .walker-main-content__body--bondInput {
       grid-area: 5/3/6/5;
       justify-self: left;
-      color: #1a1a1a; }
+      color: #1a1a1a;
+      /* unvisited link */
+      /* visited link */
+      /* mouse over link */
+      /* selected link */ }
+      .walker-main-content__body--bondInput a:link {
+        color: red; }
+      .walker-main-content__body--bondInput a:visited {
+        color: red; }
+      .walker-main-content__body--bondInput a:hover {
+        color: red; }
+      .walker-main-content__body--bondInput a:active {
+        color: red; }
     .walker-main-content__body--addressLabel {
-      grid-area: 1/5;
-      justify-self: left;
+      grid-area: 6/2;
+      justify-self: right;
       color: #1190cb; }
     .walker-main-content__body--addressInput {
-      grid-area: 2/5;
+      grid-area: 6/3/7/5;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--cityInput {
-      grid-area: 3/5;
+    .walker-main-content__body--locationInput {
+      grid-area: 7/3;
       justify-self: left;
       color: #1a1a1a; }
-    .walker-main-content__body--stateInput {
-      grid-area: 4/5;
+    .walker-main-content__body--countryInput {
+      grid-area: 8/3/9/5;
       justify-self: left;
       color: #1a1a1a; }
     .walker-main-content__body--zipcodeInput {
-      grid-area: 4/5;
+      grid-area: 8/3/9/5;
       justify-self: center;
-      color: #1a1a1a; }
-    .walker-main-content__body--countryInput {
-      grid-area: 5/5;
-      justify-self: left;
       color: #1a1a1a; }
 
 .main-content {
@@ -3202,18 +3434,18 @@ button.css-48ayfv {
 .main-content-certify {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: auto 1fr  auto;
+  grid-template-columns: .1fr 1fr 1fr .1fr;
+  grid-template-rows: 1fr auto auto;
   margin: 2em; }
   .main-content-certify__title {
-    grid-area: 1/2;
+    grid-area: 1/3;
     font-family: "Mouse Memoirs", sans-serif;
     padding: 1em;
     color: #1190cb;
     font-size: 5em; }
   .main-content-certify__form {
     color: #1a1a1a;
-    grid-area: 2/2;
+    grid-area: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
@@ -3224,14 +3456,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .main-content-certify__form--certificationInput {
       grid-area: 1/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .main-content-certify__form--insuranceLabel {
@@ -3240,14 +3472,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .main-content-certify__form--insuranceInput {
       grid-area: 2/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .main-content-certify__form--bondLabel {
@@ -3256,14 +3488,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .main-content-certify__form--bondInput {
       grid-area: 3/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .main-content-certify__form--servicesLabel {
@@ -3272,14 +3504,14 @@ button.css-48ayfv {
       font-size: 3em; }
     .main-content-certify__form--servicesInput {
       grid-area: 4/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .main-content-certify__form--availibilityLabel {
@@ -3288,27 +3520,27 @@ button.css-48ayfv {
       font-size: 3em; }
     .main-content-certify__form--availibilityStatus {
       grid-area: 5/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .main-content-certify__form--button {
       grid-area: 6/2;
       justify-self: right;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 2em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .main-content-certify__form--button:hover {
       background-color: transparent;
@@ -3317,7 +3549,7 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .walkerlogin {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -3346,14 +3578,14 @@ button.css-48ayfv {
     .walkerlogin__form--usernameInput {
       grid-area: 2/1;
       align-self: flex-start;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--passwordLabel {
@@ -3364,29 +3596,29 @@ button.css-48ayfv {
     .walkerlogin__form--passwordInput {
       grid-area: 4/1;
       align-self: flex-start;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--submitButton {
       grid-area: 5/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0 0 12px white;
+      box-shadow: 0 0 12px #a6a6a6;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--submitButton:hover {
@@ -3394,7 +3626,7 @@ button.css-48ayfv {
       letter-spacing: 0.1em;
       color: #1190cb;
       text-shadow: 2px 2px 8px #1190cb;
-      box-shadow: 0 0 12px brown;
+      box-shadow: 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--alertOne {
@@ -3412,16 +3644,16 @@ button.css-48ayfv {
     .walkerlogin__form--alertButton {
       grid-area: 7/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: red;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--alertButton:hover {
@@ -3441,12 +3673,12 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: 1em 1em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerlogin__form--homeButton:hover {
@@ -3473,6 +3705,9 @@ button.css-48ayfv {
     animation-name: movingT;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headingT {
+        animation-name: none; } }
   .walkersplash__bg--headinga {
     font-family: "Carter One", cursive;
     font-size: 20em;
@@ -3483,6 +3718,9 @@ button.css-48ayfv {
     animation-name: movinga;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headinga {
+        animation-name: none; } }
   .walkersplash__bg--headingi {
     font-family: "Carter One", cursive;
     font-size: 20em;
@@ -3493,6 +3731,9 @@ button.css-48ayfv {
     animation-name: movingi;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headingi {
+        animation-name: none; } }
   .walkersplash__bg--headingl {
     font-family: "Carter One", cursive;
     font-size: 20em;
@@ -3503,6 +3744,9 @@ button.css-48ayfv {
     animation-name: movingl;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headingl {
+        animation-name: none; } }
   .walkersplash__bg--headingm {
     font-family: "Carter One", cursive;
     font-size: 29em;
@@ -3513,6 +3757,9 @@ button.css-48ayfv {
     animation-name: movingm;
     animation-duration: 20s;
     animation-timing-function: ease-out; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headingm {
+        animation-name: none; } }
   .walkersplash__bg--headinge {
     font-family: "Carter One", cursive;
     font-size: 20em;
@@ -3523,22 +3770,25 @@ button.css-48ayfv {
     animation-name: movinge;
     animation-duration: 20s;
     animation-timing-function: ease-out; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--headinge {
+        animation-name: none; } }
   .walkersplash__bg--image {
     width: 100%;
     position: relative;
     z-index: -2; }
   .walkersplash__bg--imageshadow {
     width: 100%;
-    box-shadow: inset 0 0 30em 15em #1a1a1a; }
+    box-shadow: inset 0 0 15em 7.5em #4d4d4d; }
     @media only screen and (max-width: 56.25em) {
       .walkersplash__bg--imageshadow {
-        box-shadow: inset 0 0 15em 7.5em #1a1a1a; } }
+        box-shadow: inset 0 0 7.5em 3.75em #4d4d4d; } }
     @media only screen and (max-width: 37.5em) {
       .walkersplash__bg--imageshadow {
-        box-shadow: inset 0 0 7.5em 3.75em #1a1a1a; } }
+        box-shadow: inset 0 0 3.75em 1.375em #4d4d4d; } }
   .walkersplash__bg--subheadingA {
     font-size: 3em;
-    color: white;
+    color: #e7f6fd;
     position: absolute;
     top: 70%;
     left: 55%;
@@ -3546,9 +3796,12 @@ button.css-48ayfv {
     animation-name: subheadingFade;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--subheadingA {
+        animation-name: none; } }
   .walkersplash__bg--subheadingB {
     font-size: 3em;
-    color: white;
+    color: #e7f6fd;
     position: absolute;
     top: 75%;
     left: 55%;
@@ -3556,6 +3809,9 @@ button.css-48ayfv {
     animation-name: subheadingFade;
     animation-duration: 20s;
     animation-timing-function: ease; }
+    @media only screen and (max-width: 56.25em) {
+      .walkersplash__bg--subheadingB {
+        animation-name: none; } }
   .walkersplash__bg--icon {
     height: 60em;
     position: absolute;
@@ -3578,7 +3834,7 @@ button.css-48ayfv {
   width: 100%;
   top: 0;
   height: 10em;
-  background: #1a1a1a;
+  background: #1190cb;
   z-index: 2; }
   @media only screen and (max-width: 63.125em) {
     .walkersplash__nav {
@@ -3588,46 +3844,46 @@ button.css-48ayfv {
       height: 4em; } }
   .walkersplash__nav--userregistration {
     float: right;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: transparent;
     padding: .5em 1em;
     margin: .5em 1em;
-    border-left: 2px solid white;
+    border-left: 2px solid #e7f6fd;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--userregistration:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--walkerauthentification {
     float: right;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: transparent;
     padding: .5em 1em;
-    border-left: solid 2px white;
+    border-left: solid 2px #e7f6fd;
     margin: .5em 1em;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--walkerauthentification:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
   .walkersplash__nav--walkerregistration {
     float: right;
-    font-family: "arial", sans-serif;
+    font-family: "Thasadith", sans-serif;
     font-size: 2em;
     text-align: center;
-    color: white;
+    color: #e7f6fd;
     background-color: transparent;
     padding: .5em 1em;
     margin: .5em 1em;
@@ -3635,13 +3891,13 @@ button.css-48ayfv {
     text-decoration: none; }
   .walkersplash__nav--walkerregistration:hover {
     background-color: transparent;
-    color: #1190cb;
-    text-shadow: 2px 2px 8px #1190cb;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 8px #e7f6fd;
     outline: none;
     text-decoration: none; }
 
 .walkersplash__grid {
-  color: #e6e6e6;
+  color: #f7f7f7;
   display: grid;
   grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
   grid-template-rows: auto 1fr auto auto auto auto 1fr;
@@ -3724,15 +3980,18 @@ button.css-48ayfv {
   .walkersplash__grid--imagesText {
     grid-area: 6/4;
     font-size: 2em; }
+  .walkersplash__grid--walkerListText {
+    grid-area: 7/2;
+    font-size: 3em; }
 
 .walkersplash__footer {
   margin-top: 8em;
-  grid-area: 7/2/8/5;
+  grid-area: 8/2/8/5;
   display: flex;
   justify-content: center; }
 
 .walkeraboutTailMe {
-  background-image: radial-gradient(#e6e6e6, white); }
+  background-image: radial-gradient(#f7f7f7, #808080); }
   .walkeraboutTailMe__grid {
     height: 100%;
     display: grid;
@@ -3770,7 +4029,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 4em; }
   .createDog__form {
-    color: #e6e6e6;
+    color: #f7f7f7;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3782,13 +4041,13 @@ button.css-48ayfv {
       font-size: 3em; }
     .createDog__form--nameInput {
       grid-area: 1/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .createDog__form--phoneLabel {
@@ -3797,27 +4056,27 @@ button.css-48ayfv {
       font-size: 3em; }
     .createDog__form--phoneInput {
       grid-area: 2/2;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none;
       text-decoration: none; }
     .createDog__form--button {
       grid-area: 3/2;
       justify-self: right;
       margin-bottom: 2em;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       padding: .8em .5em;
       font-size: 2em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       cursor: pointer; }
     .createDog__form--button:hover {
       background-color: transparent;
@@ -3826,7 +4085,7 @@ button.css-48ayfv {
       text-shadow: 2px 2px 8px #1190cb; }
 
 .walkerQualifications {
-  background-image: radial-gradient(#e6e6e6, white);
+  background-image: radial-gradient(#f7f7f7, #808080);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -3841,7 +4100,7 @@ button.css-48ayfv {
     color: #1190cb;
     font-size: 5.5em; }
   .walkerQualifications__form {
-    color: white;
+    color: #333333;
     grid-area: 2/2;
     display: grid;
     grid-template-columns: 1fr;
@@ -3853,15 +4112,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerQualifications__form--certificationInput {
       grid-area: 2/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerQualifications__form--insuranceLabel {
       grid-area: 3/1;
@@ -3870,15 +4129,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerQualifications__form--insuranceInput {
       grid-area: 4/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerQualifications__form--bondLabel {
       grid-area: 5/1;
@@ -3887,15 +4146,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerQualifications__form--bondInput {
       grid-area: 6/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerQualifications__form--servicesLabel {
       grid-area: 7/1;
@@ -3904,15 +4163,15 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerQualifications__form--servicesInput {
       grid-area: 8/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerQualifications__form--userTypeLabel {
       grid-area: 9/1;
@@ -3921,29 +4180,29 @@ button.css-48ayfv {
       font-size: 3em; }
     .walkerQualifications__form--userTypeSelect {
       grid-area: 10/1;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       padding: .5em;
-      border: solid 2px white;
+      border: solid 2px #a6a6a6;
       border-radius: .5em;
       align-self: flex-start;
-      background-color: white;
-      color: white;
-      box-shadow: inset 0 0 12px brown;
+      background-color: #e7f6fd;
+      color: #333333;
+      box-shadow: inset 0 0 12px #7ECEFF;
       outline: none; }
     .walkerQualifications__form--submitButton {
       grid-area: 11/1;
       justify-self: left;
-      font-family: "arial", sans-serif;
+      font-family: "Thasadith", sans-serif;
       font-size: 3em;
       text-align: center;
-      color: white;
+      color: #e7f6fd;
       background-color: #1190cb;
       padding: .5em 1em;
       border-radius: .5em;
-      border: solid 2px white;
+      border: solid 2px #e7f6fd;
       margin: 1em 0em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerQualifications__form--submitButton:hover {
@@ -3969,12 +4228,12 @@ button.css-48ayfv {
       font-size: 3em;
       text-align: center;
       color: #1190cb;
-      background-color: #e6e6e6;
+      background-color: #f7f7f7;
       padding: .5em 1em;
       border-radius: .5em;
       border: solid 2px #1190cb;
       margin: 1em 1em;
-      box-shadow: 0.2em 0.2em 0.5em 0.1em white;
+      box-shadow: 0.2em 0.2em 0.5em 0.1em #4d4d4d;
       outline: none;
       text-decoration: none; }
     .walkerQualifications__form--homeButton:hover {
